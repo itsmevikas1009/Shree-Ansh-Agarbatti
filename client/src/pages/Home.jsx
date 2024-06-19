@@ -48,7 +48,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Shree200}
+                src={"/assets/Product/Classic/200.png"}
                 alt="movie"
               />
               <Typography
@@ -68,7 +68,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Shree500}
+                src={"/assets/Product/Premium/500.png"}
                 alt="movie"
               />
               <Typography
@@ -88,7 +88,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Shree100}
+                src={"/assets/Product/Standard/100.png"}
                 alt="movie"
               />
               <Typography
@@ -107,7 +107,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Rudraksh}
+                src={"/assets/Product/More/Rudraksh.png"}
                 alt="movie"
               />
               <Typography
@@ -148,7 +148,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
           <Typography
             className="text-xl"
             variant="heading"
@@ -176,7 +176,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
           <Typography
             className="text-xl"
             variant="heading"
@@ -204,7 +204,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
           <Typography
             className="text-xl"
             variant="heading"

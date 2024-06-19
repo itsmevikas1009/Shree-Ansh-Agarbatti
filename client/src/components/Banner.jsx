@@ -12,22 +12,22 @@ const Banner = () => {
     {
       _id: 2,
       alt: "Banner 01",
-      url: `${Banner_02}`,
+      url: "/assets/Banner/ShreeAnsh_Banner_02.jpg",
     },
     {
       _id: 3,
       alt: "Banner 02",
-      url: `${Banner_03}`,
+      url: "/assets/Banner/ShreeAnsh_Banner_03.jpg",
     },
     {
       _id: 4,
       alt: "Banner 03",
-      url: `${Banner_04}`,
+      url: "/assets/Banner/ShreeAnsh_Banner_04.jpg",
     },
     {
       _id: 5,
       alt: "Banner 04",
-      url: `${Banner_05}`,
+      url: "/assets/Banner/ShreeAnsh_Banner_05.jpg",
     },
   ];
   return (
