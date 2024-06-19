@@ -1,10 +1,10 @@
 import { styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import Banner_02 from "../assets/Banner/ShreeAnsh_Banner_02.jpg";
-// import Banner_03 from "../assets/Banner/ShreeAnsh_Banner_03.jpg";
-// import Banner_04 from "../assets/Banner/ShreeAnsh_Banner_04.jpg";
-// import Banner_05 from "../assets/Banner/ShreeAnsh_Banner_05.jpg";
+import Banner_02 from "../assets/Banner/ShreeAnsh_Banner_02.jpg";
+import Banner_03 from "../assets/Banner/ShreeAnsh_Banner_03.jpg";
+import Banner_04 from "../assets/Banner/ShreeAnsh_Banner_04.jpg";
+import Banner_05 from "../assets/Banner/ShreeAnsh_Banner_05.jpg";
 
 const Banner = () => {
   const bannerData = [
@@ -12,22 +12,22 @@ const Banner = () => {
     {
       _id: 2,
       alt: "Banner 01",
-      url: "assets/Banner/ShreeAnsh_Banner_02.jpg",
+      url: `${Banner_02}`,
     },
     {
       _id: 3,
       alt: "Banner 02",
-      url: "assets/Banner/ShreeAnsh_Banner_02.jpg",
+      url: `${Banner_03}`,
     },
     {
       _id: 4,
       alt: "Banner 03",
-      url: "assets/Banner/ShreeAnsh_Banner_02.jpg",
+      url: `${Banner_04}`,
     },
     {
       _id: 5,
       alt: "Banner 04",
-      url: "assets/Banner/ShreeAnsh_Banner_02.jpg",
+      url: `${Banner_05}`,
     },
   ];
   return (
