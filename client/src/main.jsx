@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UnderConstruction from "./components/UnderConstruction.jsx";
+import Home from "./pages/Home.jsx";
+import CC from "./pages/CC.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,16 @@ const router = createBrowserRouter([
         element: <UnderConstruction />,
       },
       {
+        path: "/home",
+        element: <Home />,
+      },
+      {
         path: "/*",
         element: <UnderConstruction />,
+      },
+      {
+        path: "/CC",
+        element: <CC />,
       },
     ],
   },
