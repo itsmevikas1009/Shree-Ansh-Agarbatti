@@ -16,8 +16,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import SearchIcon from "@mui/icons-material/Search";
 
-import AdbIcon from "@mui/icons-material/Adb";
-
 import Logo from "/icon.png";
 
 const pages = ["Home", "About", "Contact Us"];
