@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 // import Shree500 from "../assets/Product/Premium/500.png";
 // import Shree100 from "../assets/Product/Standerd/100.png";
 // import Rudraksh from "../assets/Product/More/Rudraksh.png";
-import Premium from "../assets/premium.png";
+// import Premium from "../assets/premium.png";
 
 const Home = () => {
   return (
@@ -55,7 +55,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Premium}
+                src="assets/premium.png"
                 alt="movie"
               />
               <Typography
@@ -75,7 +75,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Premium}
+                src="assets/premium.png"
                 alt="movie"
               />
               <Typography
@@ -95,7 +95,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Premium}
+                src="assets/premium.png"
                 alt="movie"
               />
               <Typography
@@ -115,7 +115,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={Premium}
+                src="assets/premium.png"
                 alt="movie"
               />
               <Typography
@@ -157,7 +157,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src="assets/premium.png" alt="" />
           <Typography
             className="text-xl"
             variant="heading"
@@ -185,7 +185,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src="assets/premium.png" alt="" />
           <Typography
             className="text-xl"
             variant="heading"
@@ -213,7 +213,7 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={Premium} alt="" />
+          <img className="px-14 pb-4" src="assets/premium.png" alt="" />
           <Typography
             className="text-xl"
             variant="heading"
