@@ -55,7 +55,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={}
+                src={Rudraksh}
                 alt="movie"
               />
               <Typography
