@@ -3,7 +3,7 @@ import Banner from "../components/Banner.jsx";
 import { Box, Typography, styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Shree200 from "../assets/Product/Classic/Shree200.png";
+// import Shree200 from "../assets/Product/Classic/Shree200.png";
 import Shree500 from "../assets/Product/Premium/500.png";
 import Shree100 from "../assets/Product/Standerd/100.png";
 import Rudraksh from "../assets/Product/More/Rudraksh.png";
@@ -55,7 +55,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24"
-                src={Shree200}
+                src={Shree500}
                 alt="movie"
               />
               <Typography
