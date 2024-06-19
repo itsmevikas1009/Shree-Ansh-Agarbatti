@@ -3,7 +3,7 @@ import Banner from "../components/Banner.jsx";
 import { Box, Typography, styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Shree200 from "../assets/Product/Classic/200.png";
+import Shree200 from "../assets/Product/Classic/Shree200.png";
 import Shree500 from "../assets/Product/Premium/500.png";
 import Shree100 from "../assets/Product/Standerd/100.png";
 import Rudraksh from "../assets/Product/More/Rudraksh.png";
