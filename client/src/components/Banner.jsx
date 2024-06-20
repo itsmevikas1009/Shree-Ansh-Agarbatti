@@ -1,10 +1,6 @@
 import { styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Banner_02 from "/assets/Banner/ShreeAnsh_Banner_02.jpg";
-import Banner_03 from "/assets/Banner/ShreeAnsh_Banner_03.jpg";
-import Banner_04 from "/assets/Banner/ShreeAnsh_Banner_04.jpg";
-import Banner_05 from "/assets/Banner/ShreeAnsh_Banner_05.jpg";
 
 const Banner = () => {
   const bannerData = [
