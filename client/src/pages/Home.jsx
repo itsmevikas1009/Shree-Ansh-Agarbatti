@@ -6,6 +6,12 @@ import "react-multi-carousel/lib/styles.css";
 const Home = () => {
   return (
     <div>
+      <a
+        className="flex justify-center items-center p-4 text-3xl bg-slate-800 w-48 mx-auto rounded-lg my-4 text-white"
+        href="/CC-IV.pdf"
+      >
+        CC-IV
+      </a>
       <Box
         sx={{
           marginY: "16px",
