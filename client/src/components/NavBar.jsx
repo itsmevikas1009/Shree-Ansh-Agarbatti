@@ -52,14 +52,14 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar
-          sx={{ paddingY: "0.75rem", marginX: { md: "2rem" } }}
+          sx={{ paddingY: "12px", marginX: { md: "32px" } }}
           disableGutters
         >
           <Box>
             <Link to="/" className="flex justify-center items-center">
               <img
                 id="logo"
-                className="w-16 ml-12 mr-2 md:flex"
+                className="w-[64px] ml-[48px] mr-[8px] md:flex"
                 src={`${Logo}`}
                 alt=""
                 loading="lazy"
@@ -103,7 +103,7 @@ function NavBar() {
           <Box
             sx={{
               flexGrow: 1,
-              marginX: "1rem",
+              marginX: "16px",
               display: { xs: "none", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
@@ -112,12 +112,12 @@ function NavBar() {
             <div className="w-[90%] relative">
               <input
                 type="text"
-                className="w-full p-4 px-12 rounded-full bg-[#FFFFFF] outline-none  shadow-xl "
+                className="w-full p-[16px] px-[48px] rounded-full bg-[#FFFFFF] outline-none  shadow-xl "
                 placeholder="Search for..."
                 // value={searchValue}
               />
 
-              <span className="absolute left-5 top-4 mx-auto opacity-80">
+              <span className="absolute left-[20px] top-[16px] mx-auto opacity-80">
                 <SearchIcon />
               </span>
             </div>
@@ -127,13 +127,13 @@ function NavBar() {
             sx={{
               display: { xs: "none", md: "flex" },
               marginLeft: "auto",
-              marginRight: "2rem",
+              marginRight: "32px",
             }}
           >
             {pages.map((page) => (
               <Link
                 to={page.route}
-                className="text-black p-2 ml-4 font-semibold"
+                className="text-black p-[8px] ml-[16px] font-semibold"
                 key={page}
                 onClick={handleCloseNavMenu}
               >
@@ -186,7 +186,7 @@ function NavBar() {
                 </MenuItem>
               ))}
             </Menu>
-            <img className="w-16" src={`${Logo}`} alt="" loading="lazy" />
+            <img className="w-[64px]" src={`${Logo}`} alt="" loading="lazy" />
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

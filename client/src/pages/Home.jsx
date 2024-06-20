@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Box
         sx={{
-          marginY: "1rem",
+          marginY: "16px",
         }}
       >
         <Typography
@@ -18,7 +18,7 @@ const Home = () => {
             fontWeight: 700,
             color: "inherit",
             textAlign: "center",
-            marginY: "1rem",
+            marginY: "16px",
           }}
         >
           SHOP BY TOP CATEGORIES
@@ -40,9 +40,9 @@ const Home = () => {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
+            <div className="flex flex-col justify-center items-center md:mx-[16px] py-4 hover:cursor-pointer">
               <img
-                className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
+                className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
                 src={"/images/Product/Classic/200.png"}
                 alt="Shree200"
               />
@@ -53,16 +53,16 @@ const Home = () => {
                   fontWeight: 600,
                   color: "inherit",
                   textAlign: "center",
-                  // marginY: "1rem",
-                  paddingY: "1rem",
+                  // marginY: "16px",
+                  paddingY: "16px",
                 }}
               >
                 Classic
               </Typography>
             </div>
-            <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
+            <div className="flex flex-col justify-center items-center md:mx-[16px] py-4 hover:cursor-pointer">
               <img
-                className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
+                className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
                 src={"/images/Product/Premium/500.png"}
                 alt="Shree500"
               />
@@ -73,16 +73,16 @@ const Home = () => {
                   fontWeight: 600,
                   color: "inherit",
                   textAlign: "center",
-                  // marginY: "1rem",
-                  paddingY: "1rem",
+                  // marginY: "16px",
+                  paddingY: "16px",
                 }}
               >
                 Premium
               </Typography>
             </div>
-            <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
+            <div className="flex flex-col justify-center items-center md:mx-[16px] py-4 hover:cursor-pointer">
               <img
-                className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
+                className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
                 src={"/images/Product/Standard/100.png"}
                 alt="Shree100"
               />
@@ -93,15 +93,15 @@ const Home = () => {
                   fontWeight: 600,
                   color: "inherit",
                   textAlign: "center",
-                  paddingY: "1rem",
+                  paddingY: "16px",
                 }}
               >
                 Standard
               </Typography>
             </div>
-            <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
+            <div className="flex flex-col justify-center items-center md:mx-[16px] py-4 hover:cursor-pointer">
               <img
-                className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
+                className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
                 src={"/images/Product/More/Rudraksh.png"}
                 alt="Rudraksh"
               />
@@ -112,7 +112,7 @@ const Home = () => {
                   fontWeight: 600,
                   color: "inherit",
                   textAlign: "center",
-                  paddingY: "1rem",
+                  paddingY: "16px",
                 }}
               >
                 More
@@ -123,7 +123,7 @@ const Home = () => {
       </Box>
       <Banner />
       <Box
-        className="sm:flex-row flex-col sm:my-4 sm:mx-24 m-4"
+        className="sm:flex-row flex-col sm:m-[16px] sm:mx-[96px] m-[16px]"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -131,16 +131,16 @@ const Home = () => {
         }}
       >
         <Box
-          className="md:mx-24 sm:mx-8 my-4 "
+          className="md:mx-[96px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
             backgroundColor: "white",
-            borderRadius: "1rem",
+            borderRadius: "16px",
             width: "250px",
-            paddingY: "1.5rem",
+            paddingY: "24px",
           }}
         >
           <img
@@ -151,28 +151,28 @@ const Home = () => {
           <Typography
             className="text-xl"
             variant="heading"
-            sx={{ paddingX: "1.5rem", fontWeight: "bold" }}
+            sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "0.95rem", paddingX: "1.5rem" }}
+            sx={{ fontSize: "15px", paddingX: "24px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-24 sm:mx-8 my-4 "
+          className="md:mx-[96px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
             backgroundColor: "white",
-            borderRadius: "1rem",
+            borderRadius: "16px",
             width: "250px",
-            paddingY: "1.5rem",
+            paddingY: "24px",
           }}
         >
           <img
@@ -183,28 +183,28 @@ const Home = () => {
           <Typography
             className="text-xl"
             variant="heading"
-            sx={{ paddingX: "1.5rem", fontWeight: "bold" }}
+            sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "0.95rem", paddingX: "1.5rem" }}
+            sx={{ fontSize: "15px", paddingX: "24px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-24 sm:mx-8 my-4 "
+          className="md:mx-[96px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
             backgroundColor: "white",
-            borderRadius: "1rem",
+            borderRadius: "16px",
             width: "250px",
-            paddingY: "1.5rem",
+            paddingY: "24px",
           }}
         >
           <img
@@ -215,13 +215,13 @@ const Home = () => {
           <Typography
             className="text-xl"
             variant="heading"
-            sx={{ paddingX: "1.5rem", fontWeight: "bold" }}
+            sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "0.95rem", paddingX: "1.5rem" }}
+            sx={{ fontSize: "15px", paddingX: "24px" }}
           >
             Most loved by our customers
           </Typography>
