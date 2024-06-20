@@ -149,7 +149,7 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="text-xl"
+            className="text-[20px]"
             variant="heading"
             sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
@@ -181,7 +181,7 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="text-xl"
+            className="text-[20px]"
             variant="heading"
             sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
@@ -213,7 +213,7 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="text-xl"
+            className="text-[20px]"
             variant="heading"
             sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
