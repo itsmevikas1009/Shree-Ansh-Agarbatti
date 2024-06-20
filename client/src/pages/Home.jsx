@@ -144,7 +144,7 @@ const Home = () => {
           }}
         >
           <img
-            className="px-14 pb-4"
+            className="px-[56px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
@@ -176,7 +176,7 @@ const Home = () => {
           }}
         >
           <img
-            className="px-14 pb-4"
+            className="px-[56px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
@@ -208,7 +208,7 @@ const Home = () => {
           }}
         >
           <img
-            className="px-14 pb-4"
+            className="px-[56px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
