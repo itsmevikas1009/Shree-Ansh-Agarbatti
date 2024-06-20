@@ -143,7 +143,11 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
+          <img
+            className="px-14 pb-4"
+            src={"/assets/premium.png"}
+            alt="premium-icon"
+          />
           <Typography
             className="text-xl"
             variant="heading"
@@ -171,7 +175,11 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
+          <img
+            className="px-14 pb-4"
+            src={"/assets/premium.png"}
+            alt="premium-icon"
+          />
           <Typography
             className="text-xl"
             variant="heading"
@@ -199,7 +207,11 @@ const Home = () => {
             paddingY: "1.5rem",
           }}
         >
-          <img className="px-14 pb-4" src={"/assets/premium.png"} alt="" />
+          <img
+            className="px-14 pb-4"
+            src={"/assets/premium.png"}
+            alt="premium-icon"
+          />
           <Typography
             className="text-xl"
             variant="heading"
