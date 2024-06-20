@@ -44,7 +44,7 @@ const Home = () => {
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
                 src={"/assets/Product/Classic/200.png"}
-                alt="movie"
+                alt="Shree200"
               />
               <Typography
                 variant="h6"
@@ -64,7 +64,7 @@ const Home = () => {
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
                 src={"/assets/Product/Premium/500.png"}
-                alt="movie"
+                alt="Shree500"
               />
               <Typography
                 variant="h6"
@@ -84,7 +84,7 @@ const Home = () => {
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
                 src={"/assets/Product/Standard/100.png"}
-                alt="movie"
+                alt="Shree100"
               />
               <Typography
                 variant="h6"
@@ -103,7 +103,7 @@ const Home = () => {
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
                 src={"/assets/Product/More/Rudraksh.png"}
-                alt="movie"
+                alt="Rudraksh"
               />
               <Typography
                 variant="h6"
