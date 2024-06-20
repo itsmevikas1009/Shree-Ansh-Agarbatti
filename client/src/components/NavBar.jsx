@@ -8,17 +8,22 @@ import {
   Menu,
   Container,
   Avatar,
-  Button,
   Tooltip,
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import { Link } from "react-router-dom";
+
 import SearchIcon from "@mui/icons-material/Search";
 
 import Logo from "/icon.png";
 
-const pages = ["Home", "About", "Contact Us"];
+const pages = [
+  { route: "/home", page: "Home" },
+  { route: "/about", page: "About" },
+  { route: "/contact-us", page: "Contact Us" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
@@ -50,37 +55,30 @@ function NavBar() {
           sx={{ paddingY: "0.75rem", marginX: { md: "2rem" } }}
           disableGutters
         >
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              id="logo"
-              className="w-16 ml-12 mr-2 md:flex"
-              src={`${Logo}`}
-              alt=""
-              loading="lazy"
-            />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              Shree Ansh Agarbatti
-            </Typography>
+          <Box>
+            <Link to="/" className="flex justify-center items-center">
+              <img
+                id="logo"
+                className="w-16 ml-12 mr-2 md:flex"
+                src={`${Logo}`}
+                alt=""
+                loading="lazy"
+              />
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                Shree Ansh Agarbatti
+              </Typography>
+            </Link>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
 
@@ -133,57 +131,16 @@ function NavBar() {
             }}
           >
             {pages.map((page) => (
-              <Button
+              <Link
+                to={page.route}
+                className="text-black p-2 ml-4 font-semibold"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{
-                  color: "black",
-                  display: "block",
-                  fontWeight: "600",
-                  marginLeft: "1rem",
-                }}
               >
-                {page}
-              </Button>
+                {page.page}
+              </Link>
             ))}
           </Box>
-
-          {/* <Box
-            sx={{
-              flexGrow: 0,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Tooltip title="Open settings">
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: 6 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-              >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-              </Menu>
-            </Box> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -225,7 +182,7 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page.page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
