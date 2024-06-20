@@ -8,22 +8,22 @@ const Banner = () => {
     {
       _id: 2,
       alt: "Banner 01",
-      url: "/src/Banner/ShreeAnsh_Banner_02.jpg",
+      url: "/images/Banner/ShreeAnsh_Banner_02.jpg",
     },
     {
       _id: 3,
       alt: "Banner 02",
-      url: "/src/Banner/ShreeAnsh_Banner_03.jpg",
+      url: "/images/Banner/ShreeAnsh_Banner_03.jpg",
     },
     {
       _id: 4,
       alt: "Banner 03",
-      url: "/src/Banner/ShreeAnsh_Banner_04.jpg",
+      url: "/images/Banner/ShreeAnsh_Banner_04.jpg",
     },
     {
       _id: 5,
       alt: "Banner 04",
-      url: "/src/Banner/ShreeAnsh_Banner_05.jpg",
+      url: "/images/Banner/ShreeAnsh_Banner_05.jpg",
     },
   ];
   return (

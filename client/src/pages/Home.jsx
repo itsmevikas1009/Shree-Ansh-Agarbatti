@@ -43,7 +43,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={"/src/Product/Classic/200.png"}
+                src={"/images/Product/Classic/200.png"}
                 alt="Shree200"
               />
               <Typography
@@ -63,7 +63,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={"/src/Product/Premium/500.png"}
+                src={"/images/Product/Premium/500.png"}
                 alt="Shree500"
               />
               <Typography
@@ -83,7 +83,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={"/src/Product/Standard/100.png"}
+                src={"/images/Product/Standard/100.png"}
                 alt="Shree100"
               />
               <Typography
@@ -102,7 +102,7 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center md:mx-4 py-4 hover:cursor-pointer">
               <img
                 className="px-4 lg:w-72 lg:h-64 md:w-60 md:h-52 w-32 h-24 "
-                src={"/src/Product/More/Rudraksh.png"}
+                src={"/images/Product/More/Rudraksh.png"}
                 alt="Rudraksh"
               />
               <Typography
@@ -145,7 +145,7 @@ const Home = () => {
         >
           <img
             className="px-14 pb-4"
-            src={"/src/premium.png"}
+            src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
@@ -177,7 +177,7 @@ const Home = () => {
         >
           <img
             className="px-14 pb-4"
-            src={"/src/premium.png"}
+            src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
@@ -209,7 +209,7 @@ const Home = () => {
         >
           <img
             className="px-14 pb-4"
-            src={"/src/premium.png"}
+            src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
