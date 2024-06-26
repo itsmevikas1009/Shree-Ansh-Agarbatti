@@ -28,6 +28,7 @@ const Banner = () => {
   ];
   return (
     <Carousel
+      className="sm:m-[32px]"
       swipeable={false}
       draggable={false}
       responsive={responsive}
@@ -68,7 +69,8 @@ const responsive = {
 
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
-  height: 550,
+  height: 610,
+  borderRadius: "10px",
   [theme.breakpoints.down("sm")]: {
     objectFit: "cover",
     height: 300,

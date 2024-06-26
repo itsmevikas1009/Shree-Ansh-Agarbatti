@@ -6,9 +6,14 @@ import "react-multi-carousel/lib/styles.css";
 const Home = () => {
   return (
     <div>
+      <Banner />
       <Box
         sx={{
-          marginY: "16px",
+          marginY: "32px",
+          backgroundColor: "#FFFFFF",
+          padding: "32px 0px",
+          marginX: { sm: "2rem" },
+          borderRadius: "10px",
         }}
       >
         <Typography
@@ -18,7 +23,6 @@ const Home = () => {
             fontWeight: 700,
             color: "inherit",
             textAlign: "center",
-            marginY: "16px",
           }}
         >
           SHOP BY TOP CATEGORIES
@@ -121,7 +125,6 @@ const Home = () => {
           </Carousel>
         </div>
       </Box>
-      <Banner />
       <Box
         className="sm:flex-row flex-col sm:m-[16px] sm:mx-[96px] m-[16px]"
         sx={{
@@ -131,7 +134,7 @@ const Home = () => {
         }}
       >
         <Box
-          className="md:mx-[96px] sm:m-[32px] m-[16px] "
+          className="md:mx-[80px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -139,7 +142,7 @@ const Home = () => {
             flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "16px",
-            width: "250px",
+            width: "300px",
             paddingY: "24px",
           }}
         >
@@ -157,13 +160,13 @@ const Home = () => {
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "24px" }}
+            sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-[96px] sm:m-[32px] m-[16px] "
+          className="md:mx-[80px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -171,7 +174,7 @@ const Home = () => {
             flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "16px",
-            width: "250px",
+            width: "300px",
             paddingY: "24px",
           }}
         >
@@ -189,13 +192,13 @@ const Home = () => {
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "24px" }}
+            sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-[96px] sm:m-[32px] m-[16px] "
+          className="md:mx-[80px] sm:m-[32px] m-[16px] "
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -203,7 +206,7 @@ const Home = () => {
             flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "16px",
-            width: "250px",
+            width: "300px",
             paddingY: "24px",
           }}
         >
@@ -221,7 +224,7 @@ const Home = () => {
           </Typography>
           <Typography
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "24px" }}
+            sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>

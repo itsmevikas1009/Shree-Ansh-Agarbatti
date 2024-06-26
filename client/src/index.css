@@ -16,3 +16,15 @@ body {
     display: none;
   }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff3ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}

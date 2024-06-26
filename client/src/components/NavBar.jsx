@@ -52,7 +52,7 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar
-          sx={{ paddingY: "12px", marginX: { md: "32px" } }}
+          sx={{ paddingY: "10px", marginX: { md: "16px" } }}
           disableGutters
         >
           <Box>
