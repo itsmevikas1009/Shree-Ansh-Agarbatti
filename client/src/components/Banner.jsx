@@ -28,7 +28,7 @@ const Banner = () => {
   ];
   return (
     <Carousel
-      className="sm:m-[32px]"
+      className="my-[16px]"
       swipeable={false}
       draggable={false}
       responsive={responsive}

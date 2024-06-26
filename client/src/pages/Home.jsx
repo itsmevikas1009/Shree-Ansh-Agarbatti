@@ -1,7 +1,8 @@
 import Banner from "../components/Banner.jsx";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Slider } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -229,6 +230,30 @@ const Home = () => {
             Most loved by our customers
           </Typography>
         </Box>
+      </Box>
+      <Box className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[10px]">
+        <Typography variant="heading" className="text-[32px] m-0 p-0 font-bold">
+          About Us
+        </Typography>
+        <div className="flex sm:flex-row flex-col sm:mx-0 mx-4 sm:my-0 my-4 justify-center items-center sm:gap-4">
+          <img className="w-32" src="/icon.png" alt="" />
+          <div>
+            Shree Ansh Agarbatti as a brand is known for manufacturing perfumed
+            agarbatti. Shree Ansh Agarbatti is a name that has earned the
+            respect, Shree Ansh has continued to grow in strength and market
+            reach to be ranked as the best agarbatti manufacturing company in
+            India and across the world. With state-of-the-art manufacturing
+            facilities located at Gorakhpur, we manufacture a vast range of
+            perfumed agarbatti. Our premium flagship collection product range
+            being the most loved by our customers.
+          </div>
+        </div>
+        <Link
+          className="px-4 py-1 rounded-[20px] text-white bg-red-800"
+          to="/about-us"
+        >
+          Know More
+        </Link>
       </Box>
     </div>
   );
