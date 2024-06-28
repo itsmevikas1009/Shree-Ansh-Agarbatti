@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto my-8 px-4 sm:px-8 md:px-16 lg:px-32">
       <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
       <div className="text-lg">
         <p>
@@ -27,19 +27,21 @@ const AboutUs = () => {
           premium, woody, cosmetic, florabatti.
         </p>
       </div>
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Founder</h2>
+      <div className="px-8 py-8 my-8 bg-white rounded-xl">
         <div className="flex items-center">
           <img
             src="/images/founder.png"
             alt="Founder Image"
-            className="w-24 h-24 rounded-full mr-4"
+            className="w-28 rounded-full mr-4"
           />
-          <p>
-            The Founders, Late Mr. Anup Chaurasia through his hard work,
-            dedication, and dynamism made the company most trusted and popular
-            brands.
-          </p>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Founder</h2>
+            <p>
+              The Founders, Late Mr. Anup Chaurasia through his hard work,
+              dedication, and dynamism made the company most trusted and popular
+              brands.
+            </p>
+          </div>
         </div>
       </div>
       <div className="mt-8">
