@@ -4,11 +4,11 @@ import {
   Box,
   Toolbar,
   IconButton,
-  Typography,
+  // Typography,
   Menu,
   Container,
-  Avatar,
-  Tooltip,
+  // Avatar,
+  // Tooltip,
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,32 +17,38 @@ import { Link } from "react-router-dom";
 
 import SearchIcon from "@mui/icons-material/Search";
 
-import Logo from "/icon.png";
+import Logo from "/logo.png";
+import { useState } from "react";
 
 const pages = [
   { route: "/home", page: "Home" },
-  { route: "/about", page: "About" },
+  { route: "/about-us", page: "About" },
   { route: "/contact-us", page: "Contact Us" },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [showInput, setShowInput] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
+
+  const handleClick = () => {
+    setShowInput(!showInput);
   };
 
   return (
@@ -59,12 +65,12 @@ function NavBar() {
             <Link to="/" className="flex justify-center items-center">
               <img
                 id="logo"
-                className="w-[64px] ml-[48px] mr-[8px] md:flex"
+                className=" ml-[48px] mr-[8px] md:flex"
                 src={`${Logo}`}
                 alt=""
                 loading="lazy"
               />
-              <Typography
+              {/* <Typography
                 variant="h6"
                 noWrap
                 sx={{
@@ -77,7 +83,7 @@ function NavBar() {
                 }}
               >
                 Shree Ansh Agarbatti
-              </Typography>
+              </Typography> */}
             </Link>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
@@ -100,16 +106,16 @@ function NavBar() {
             Shree Ansh Agarbatti Co.
           </Typography> */}
 
-          <Box
+          {/* <Box
             sx={{
               flexGrow: 1,
               marginX: "16px",
               display: { xs: "none", md: "flex" },
-              justifyContent: "center",
+              justifyContent: "end",
               alignItems: "center",
             }}
           >
-            <div className="w-[90%] relative">
+            <div className="">
               <input
                 type="text"
                 className="w-full p-[16px] px-[48px] rounded-full bg-[#FFFFFF] outline-none  shadow-xl "
@@ -117,19 +123,22 @@ function NavBar() {
                 // value={searchValue}
               />
 
-              <span className="absolute left-[20px] top-[16px] mx-auto opacity-80">
+              <span className="">
                 <SearchIcon />
               </span>
             </div>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
               marginLeft: "auto",
               marginRight: "32px",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
+            {/* <SearchIcon /> */}
             {pages.map((page) => (
               <Link
                 to={page.route}
@@ -140,6 +149,34 @@ function NavBar() {
                 {page.page}
               </Link>
             ))}
+          </Box>
+          <Box
+            sx={{
+              // flexGrow: 1,
+              marginX: "16px",
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {showInput ? (
+              <form className="flex justify-center items-center">
+                <div className="relative w-full">
+                  <input
+                    type="text"
+                    id="voice-search"
+                    className=" p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
+                    placeholder="Search for..."
+                    required
+                  />
+                  <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
+                    <SearchIcon onClick={handleClick} />
+                  </div>
+                </div>
+              </form>
+            ) : (
+              <SearchIcon onClick={handleClick}></SearchIcon>
+            )}
           </Box>
           <Box
             sx={{
@@ -188,13 +225,13 @@ function NavBar() {
                 </MenuItem>
               ))}
             </Menu>
-            <img className="w-[64px]" src={`${Logo}`} alt="" loading="lazy" />
-            <Tooltip title="Open settings">
+            <img className="" src={`${Logo}`} alt="" loading="lazy" />
+            {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
-            </Tooltip>
-            <Menu
+            </Tooltip> */}
+            {/* <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -215,7 +252,36 @@ function NavBar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+                
+            </Menu> */}
+            <Box
+              sx={{
+                // flexGrow: 1,
+                marginX: "16px",
+                display: { xs: "flex", md: "none" },
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {showInput ? (
+                <form className="flex justify-center items-center">
+                  <div className="relative w-full">
+                    <input
+                      type="text"
+                      id="voice-search"
+                      className="p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
+                      placeholder="Search for..."
+                      required
+                    />
+                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
+                      <SearchIcon onClick={handleClick} />
+                    </div>
+                  </div>
+                </form>
+              ) : (
+                <SearchIcon onClick={handleClick}></SearchIcon>
+              )}
+            </Box>
           </Box>
         </Toolbar>
       </Container>
