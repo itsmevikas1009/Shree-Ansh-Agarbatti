@@ -154,8 +154,6 @@ function NavBar() {
             </Box>
             <Box
               sx={{
-                // flexGrow: 1,
-                marginX: "16px",
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
                 alignItems: "center",
@@ -172,7 +170,7 @@ function NavBar() {
                       required
                     />
                     <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                      <SearchIcon />
+                      <CloseIcon onClick={handleClick} />
                     </div>
                   </div>
                 </form>
@@ -267,7 +265,7 @@ function NavBar() {
                   alignItems: "center",
                 }}
               >
-                {showInput ? (
+                {!showInput ? (
                   <SearchIcon
                     className="cursor-pointer"
                     onClick={handleClick}
@@ -280,7 +278,7 @@ function NavBar() {
           </Toolbar>
         </Container>
       </AppBar>
-      {!showInput && (
+      {showInput && (
         <Box
           sx={{
             // flexGrow: 1,

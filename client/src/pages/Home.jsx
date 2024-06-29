@@ -127,7 +127,7 @@ const Home = () => {
         </div>
       </Box>
       <Box
-        className="sm:flex-row flex-col sm:m-[16px] sm:mx-[96px] m-[16px]"
+        className="sm:flex-row md:flex-row lg:flex-row flex-col sm:m-[16px] sm:mx-[60px] md:mx-[80px] lg:mx-[90px] mx-auto m-[16px]"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -135,7 +135,7 @@ const Home = () => {
         }}
       >
         <Box
-          className="md:mx-[80px] sm:m-[32px] m-[16px] "
+          className="lg:mx-[80px] md:mx-[32px] sm:mx-[24px] mx-auto sm:my-[32px] my-[16px]  "
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -148,26 +148,27 @@ const Home = () => {
           }}
         >
           <img
-            className="px-[56px] pb-[16px]"
+            className="lg:px-[44px] md:px-[36px] sm:px-[28px] px-[44px] lg:pb-[16px] md:pb-[12px] sm:pb-[8px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
-            className="text-[20px]"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            sx={{ paddingX: "24px", fontWeight: "bold" }}
+            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "20px" }}
+            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-[80px] sm:m-[32px] m-[16px] "
+          className="lg:mx-[80px] md:mx-[32px] sm:mx-[24px] mx-auto sm:my-[32px] my-[16px]  "
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -180,26 +181,27 @@ const Home = () => {
           }}
         >
           <img
-            className="px-[56px] pb-[16px]"
+            className="lg:px-[44px] md:px-[36px] sm:px-[28px] px-[44px] lg:pb-[16px] md:pb-[12px] sm:pb-[8px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
-            className="text-[20px]"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            sx={{ paddingX: "24px", fontWeight: "bold" }}
+            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "20px" }}
+            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
         </Box>
         <Box
-          className="md:mx-[80px] sm:m-[32px] m-[16px] "
+          className="lg:mx-[80px] md:mx-[32px] sm:mx-[24px] mx-auto sm:my-[32px] my-[16px]"
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -212,20 +214,21 @@ const Home = () => {
           }}
         >
           <img
-            className="px-[56px] pb-[16px]"
+            className="lg:px-[44px] md:px-[36px] sm:px-[28px] px-[44px] lg:pb-[16px] md:pb-[12px] sm:pb-[8px] pb-[16px]"
             src={"/images/premium.png"}
             alt="premium-icon"
           />
           <Typography
-            className="text-[20px]"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            sx={{ paddingX: "24px", fontWeight: "bold" }}
+            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            sx={{ fontSize: "15px", paddingX: "20px" }}
+            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
