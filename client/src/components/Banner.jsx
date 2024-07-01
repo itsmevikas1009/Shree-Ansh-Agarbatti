@@ -8,22 +8,22 @@ const Banner = () => {
     {
       _id: 2,
       alt: "Banner 01",
-      url: "/images/Banner/ShreeAnsh_Banner_02.jpg",
+      url: "https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Banner/lo7ve0ksmzdvefoyrso3",
     },
     {
       _id: 3,
       alt: "Banner 02",
-      url: "/images/Banner/ShreeAnsh_Banner_03.jpg",
+      url: "https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Banner/spy7hgroyqk8vblzaluc",
     },
     {
       _id: 4,
       alt: "Banner 03",
-      url: "/images/Banner/ShreeAnsh_Banner_04.jpg",
+      url: "https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Banner/uimaptjkhfxeqnjerytp",
     },
     {
       _id: 5,
       alt: "Banner 04",
-      url: "/images/Banner/ShreeAnsh_Banner_05.jpg",
+      url: "https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Banner/b6btfj9tfatwsmjt5hll",
     },
   ];
   return (
