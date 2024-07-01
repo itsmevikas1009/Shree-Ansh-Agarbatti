@@ -69,7 +69,7 @@ function NavBar() {
                   id="logo"
                   className=" ml-[48px] mr-[8px] md:flex"
                   src={`${Logo}`}
-                  alt=""
+                  alt="Shree Ansh Agarbatti"
                   loading="lazy"
                 />
                 {/* <Typography
@@ -228,7 +228,13 @@ function NavBar() {
                   </MenuItem>
                 ))}
               </Menu>
-              <img className="" src={`${Logo}`} alt="" loading="lazy" />
+              <Link to="/" className="flex justify-center items-center">
+                <img
+                  src={`${Logo}`}
+                  alt="Shree Ansh Agarbatti"
+                  loading="lazy"
+                />
+              </Link>
               {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
