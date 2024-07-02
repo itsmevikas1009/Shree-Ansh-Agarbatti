@@ -1,9 +1,7 @@
 import Banner from "../components/Banner.jsx";
 import { Box, Typography } from "@mui/material";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
-import { galleryData, productData } from "../data.js";
 import ProductCarousel from "../components/ProductCarousel.jsx";
 import GalleryCarousel from "../components/GalleryCarousel.jsx";
 
@@ -31,28 +29,7 @@ const Home = () => {
         >
           SHOP BY TOP CATEGORIES
         </Typography>
-        <div className="lg:mx-20">
-          <Carousel
-            swipeable={true}
-            draggable={true}
-            showDots={true}
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={8000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            containerclassName="carousel-container"
-            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-            // deviceType={this.props.deviceType}
-            dotListclassName="custom-dot-list-style"
-            itemclassName="carousel-item-padding-40-px"
-          >
-            {productData.map((product) => (
-              <ProductCarousel key={product.id} product={product} />
-            ))}
-          </Carousel>
-        </div>
+        <ProductCarousel />
       </Box>
       <Box
         className="sm:flex-row md:flex-row lg:flex-row flex-col sm:m-[16px] sm:mx-[60px] md:mx-[80px] lg:mx-[90px] mx-auto m-[16px]"
@@ -206,67 +183,10 @@ const Home = () => {
         >
           GALLERY
         </Typography>
-        <div className="lg:mx-20">
-          <Carousel
-            swipeable={true}
-            draggable={true}
-            responsive={galleryResponsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            containerclassName="carousel-container"
-            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-            dotListclassName="custom-dot-list-style"
-            itemclassName="carousel-item-padding-40-px"
-          >
-            {galleryData.map((gallery) => (
-              <GalleryCarousel key={gallery.id} gallery={gallery} />
-            ))}
-          </Carousel>
-        </div>
+        <GalleryCarousel />
       </Box>
     </div>
   );
 };
 
 export default Home;
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 4,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 3,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 3,
-  },
-};
-
-const galleryResponsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
