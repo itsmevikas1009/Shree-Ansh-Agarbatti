@@ -3,8 +3,9 @@ import { Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
-import { productData } from "../productData.js";
+import { galleryData, productData } from "../data.js";
 import ProductCarousel from "../components/ProductCarousel.jsx";
+import GalleryCarousel from "../components/GalleryCarousel.jsx";
 
 const Home = () => {
   return (
@@ -185,6 +186,47 @@ const Home = () => {
           Know More
         </Link>
       </Box>
+      <Box
+        sx={{
+          marginY: "32px",
+          backgroundColor: "#FFFFFF",
+          padding: "32px 0px",
+          marginX: { sm: "2rem" },
+          borderRadius: "10px",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "monospace",
+            fontWeight: 700,
+            color: "inherit",
+            textAlign: "center",
+          }}
+        >
+          GALLERY
+        </Typography>
+        <div className="lg:mx-20">
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            responsive={galleryResponsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={8000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            containerclassName="carousel-container"
+            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+            dotListclassName="custom-dot-list-style"
+            itemclassName="carousel-item-padding-40-px"
+          >
+            {galleryData.map((gallery) => (
+              <GalleryCarousel key={gallery.id} gallery={gallery} />
+            ))}
+          </Carousel>
+        </div>
+      </Box>
     </div>
   );
 };
@@ -207,5 +249,24 @@ const responsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 3,
+  },
+};
+
+const galleryResponsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
   },
 };

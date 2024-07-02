@@ -42,3 +42,25 @@ export const productData = [
         ]
     }
 ]
+
+export const galleryData = [
+    {
+        'id': '01',
+        'category': 'Standard',
+        'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/cphpzimnzdy6ykb1ulgf',
+
+
+    },
+    {
+        'id': '02',
+        'category': 'More',
+        'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/More/ghvhw8irbqrmvejgxndp',
+
+    },
+    {
+        'id': '02',
+        'category': 'More',
+        'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/r3dvbg1lxpi9khxwoeei',
+
+    }
+]
