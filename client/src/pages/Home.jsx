@@ -32,13 +32,13 @@ const Home = () => {
         </Typography>
         <div className="lg:mx-20">
           <Carousel
-            swipeable={false}
+            swipeable={true}
             draggable={true}
             showDots={true}
             responsive={responsive}
             infinite={true}
-            // autoPlay={this.props.deviceType !== "mobile" ? false : true}
-            autoPlaySpeed={3000}
+            autoPlay={true}
+            autoPlaySpeed={8000}
             keyBoardControl={true}
             customTransition="all .5"
             containerclassName="carousel-container"
@@ -195,21 +195,17 @@ const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
     items: 4,
-    autoPlay: false,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    autoPlay: false,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 3,
-    autoPlay: false,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 3,
-    autoPlay: true,
   },
 };
