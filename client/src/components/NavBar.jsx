@@ -58,7 +58,7 @@ function NavBar() {
         sx={{ backgroundColor: "#fff3f3", color: "black" }}
         position="sticky"
       >
-        <Container maxWidth="xl">
+        <Container className="shadow-md" maxWidth="xl">
           <Toolbar
             sx={{ paddingY: "10px", marginX: { md: "16px" } }}
             disableGutters
@@ -283,33 +283,33 @@ function NavBar() {
             </Box>
           </Toolbar>
         </Container>
-      </AppBar>
-      {showInput && (
-        <Box
-          sx={{
-            // flexGrow: 1,
-            margin: "16px 32px",
-            display: { xs: "flex", md: "none" },
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <form className="w-full flex justify-center items-center">
-            <div className="relative w-full">
-              <input
-                type="text"
-                id="voice-search"
-                className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
-                placeholder="Search for..."
-                required
-              />
-              <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                <SearchIcon />
+        {showInput && (
+          <Box
+            sx={{
+              // flexGrow: 1,
+              margin: "16px 32px",
+              display: { xs: "flex", md: "none" },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <form className="w-full flex justify-center items-center">
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  id="voice-search"
+                  className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
+                  placeholder="Search for..."
+                  required
+                />
+                <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
+                  <SearchIcon />
+                </div>
               </div>
-            </div>
-          </form>
-        </Box>
-      )}
+            </form>
+          </Box>
+        )}
+      </AppBar>
     </>
   );
 }
