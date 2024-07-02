@@ -189,7 +189,7 @@ const Home = () => {
       <Box
         sx={{
           marginY: "32px",
-          backgroundColor: "#FFFFFF",
+          // backgroundColor: "#FFFFFF",
           padding: "32px 0px",
           marginX: { sm: "2rem" },
           borderRadius: "10px",
@@ -213,7 +213,7 @@ const Home = () => {
             responsive={galleryResponsive}
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={8000}
+            autoPlaySpeed={3000}
             keyBoardControl={true}
             customTransition="all .5"
             containerclassName="carousel-container"
