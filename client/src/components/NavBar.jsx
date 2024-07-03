@@ -67,7 +67,7 @@ function NavBar() {
               <Link to="/" className="flex justify-center items-center">
                 <img
                   id="logo"
-                  className=" ml-[48px] mr-[8px] md:flex"
+                  className="ml-[48px] mr-[8px] md:flex"
                   src={`${Logo}`}
                   alt="Shree Ansh Agarbatti"
                   loading="lazy"
@@ -135,7 +135,7 @@ function NavBar() {
               sx={{
                 display: { xs: "none", md: "flex" },
                 marginLeft: "auto",
-                marginRight: "32px",
+                marginRight: "24px",
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -157,6 +157,7 @@ function NavBar() {
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
                 alignItems: "center",
+                marginRight: "48px",
               }}
             >
               {showInput ? (

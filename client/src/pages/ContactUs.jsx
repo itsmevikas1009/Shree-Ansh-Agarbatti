@@ -101,14 +101,28 @@ const ContactUs = () => {
     window.location.href = mailtoLink;
   };
   return (
-    <Box py={4} px={4} className="container mx-auto">
+    <Box id="Contact" py={4} px={4} className="container mx-auto">
       <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
       <Grid
         container
-        spacing={4}
+        // spacing={4}
         className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center "
       >
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid
+          marginY={2}
+          item
+          borderRight={{
+            lg: "1px solid black",
+            md: "1px solid black",
+            sm: "1px solid black",
+          }}
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          xl={2}
+          paddingX={2}
+        >
           <Box display="flex" flexDirection="column" alignItems="center">
             <IconButton aria-label="home">
               <PlaceOutlinedIcon fontSize="large" />
@@ -122,7 +136,17 @@ const ContactUs = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid
+          marginY={2}
+          borderRight={{ lg: "1px solid black", md: "1px solid black" }}
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          xl={2}
+          paddingX={2}
+        >
           <Box display="flex" flexDirection="column" alignItems="center">
             <IconButton aria-label="mail">
               <MailOutlineIcon fontSize="large" />
@@ -135,7 +159,21 @@ const ContactUs = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid
+          marginY={2}
+          borderRight={{
+            lg: "1px solid black",
+            sm: "1px solid black",
+            md: "none",
+          }}
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          xl={2}
+          paddingX={2}
+        >
           <Box display="flex" flexDirection="column" alignItems="center">
             <IconButton aria-label="phone">
               <LocalPhoneOutlinedIcon fontSize="large" />
@@ -148,7 +186,7 @@ const ContactUs = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid marginY={2} paddingX={2} item xs={12} sm={6} md={4} lg={3} xl={2}>
           <Box display="flex" flexDirection="column" alignItems="center">
             <IconButton aria-label="schedule">
               <ScheduleOutlinedIcon fontSize="large" />
