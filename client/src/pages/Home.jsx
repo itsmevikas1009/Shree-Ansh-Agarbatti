@@ -7,9 +7,10 @@ import GalleryCarousel from "../components/GalleryCarousel.jsx";
 
 const Home = () => {
   return (
-    <div>
+    <div id="Home">
       <Banner />
       <Box
+        id="Standard"
         sx={{
           marginY: "32px",
           backgroundColor: "#FFFFFF",
@@ -139,7 +140,10 @@ const Home = () => {
           </Typography>
         </Box>
       </Box>
-      <Box className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[10px]">
+      <Box
+        id="About"
+        className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[10px]"
+      >
         <Typography variant="heading" className="text-[32px] m-0 p-0 font-bold">
           About Us
         </Typography>
@@ -157,13 +161,14 @@ const Home = () => {
           </div>
         </div>
         <Link
-          className="px-4 py-1 rounded-[20px] text-white bg-red-800"
+          className="px-4 py-1 rounded-[20px] text-white bg-red-600"
           to="/about-us"
         >
           Know More
         </Link>
       </Box>
       <Box
+        id="Gallery"
         sx={{
           marginY: "32px",
           // backgroundColor: "#FFFFFF",
