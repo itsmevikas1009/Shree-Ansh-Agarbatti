@@ -16,10 +16,10 @@ const Footer = () => {
               alt="Shree Ansh Agarbatti"
               className="block  md:hidden lg:hidden w-56 mx-auto"
             />
-            <h3 className="mt-4 sm:mt-0 mb-4 text-2xl font-bold">
+            <h3 className="mt-4 sm:mt-0 mb-2 text-2xl font-bold">
               Shree Ansh Agarbatti
             </h3>
-            <p className="mb-[16px] text-sm sm:text-base">
+            <p className="mb-[8px] text-sm sm:text-base">
               We understand what our customer demands and expects. We as a brand
               are more customers driven and believe in the spirit of innovation
               and creativity.
@@ -30,8 +30,8 @@ const Footer = () => {
               className="hidden sm:hidden md:block lg:block w-32 h-auto sm:w-40 md:w-48 lg:w-56"
             />
           </div>
-          <div className="mt-4 w-full md:w-1/4 lg:w-1/4">
-            <h3 className="text-xl font-bold mb-4 uppercase">Useful Links</h3>
+          <div className="mt-4 w-full md:w-1/4 lg:w-1/4 mb-2">
+            <h3 className="text-xl font-bold mb-2 uppercase">Useful Links</h3>
             <ul className="list-none p-0">
               <li>
                 <HashLink
@@ -77,7 +77,6 @@ const Footer = () => {
                 </HashLink>
                 {/* <a href="#" className="block hover:underline"></a> */}
               </li>
-
               <li>
                 <HashLink
                   to="/contact-us#Contact"
@@ -90,8 +89,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="mt-4 w-full md:w-1/3 lg:w-1/3 ">
-            <h3 className="text-xl font-bold mb-4 uppercase">Contact</h3>
+          <div className="mt-4 w-full md:w-1/3 lg:w-1/3 mb-2">
+            <h3 className="text-xl font-bold mb-2 uppercase">Contact</h3>
             <ul className="list-none p-0">
               <li className="mb-2">
                 Shree Ansh Agarbatti Co. Gola Bazar, Gorakhpur, Uttar Pradesh
@@ -101,9 +100,9 @@ const Footer = () => {
               <li>shreeansh26@gmail.com</li>
             </ul>
           </div>
-          <div className="mt-4 w-full sm:w-1/3 md:w-1/4 lg:w-1/4 text-center sm:text-left md:text-left lg:text-left">
-            <h3 className="text-xl font-bold mb-4 uppercase">Connect</h3>
-            <ul className="flex lg:justify-start md:justify-start sm:justify-start justify-center items-center gap-4 list-none p-0">
+          <div className="mt-4 w-full md:w-1/4 lg:w-1/4 mb-2">
+            <h3 className="text-xl font-bold mb-2 uppercase">Connect</h3>
+            <ul className="flex items-center gap-4 list-none">
               <li>
                 <a href="https://www.facebook.com/people/SHREE-ANSH-Agarbatti-Co/100065174973492/">
                   <FacebookOutlinedIcon fontSize="medium" />

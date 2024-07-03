@@ -37,9 +37,11 @@ const AboutUs = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">Founder</h2>
             <p>
-              The Founders, Late Mr. Anup Chaurasia through his hard work,
-              dedication, and dynamism made the company most trusted and popular
-              brands.
+              <span className="font-semibold">
+                The Founders, Late Mr. Anup Chaurasia
+              </span>{" "}
+              through his hard work, dedication, and dynamism made the company
+              most trusted and popular brands.
             </p>
           </div>
         </div>
