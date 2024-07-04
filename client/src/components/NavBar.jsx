@@ -20,6 +20,8 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import Logo from "/logo.png";
 import { useState } from "react";
+import { productData } from "../utils/data.js";
+import ProductCard from "./ProductCard.jsx";
 
 const pages = [
   { route: "/home", page: "Home" },
@@ -31,6 +33,8 @@ const pages = [
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [showInput, setShowInput] = useState(false);
+  const [filteredProduct, setFilteredProduct] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,6 +46,7 @@ function NavBar() {
 
   const handleClick = () => {
     setShowInput(!showInput);
+    setFilteredProduct([]);
   };
 
   return (
@@ -64,65 +69,8 @@ function NavBar() {
                   alt="Shree Ansh Agarbatti"
                   loading="lazy"
                 />
-                {/* <Typography
-                variant="h6"
-                noWrap
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                Shree Ansh Agarbatti
-              </Typography> */}
               </Link>
             </Box>
-            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-
-            {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Shree Ansh Agarbatti Co.
-          </Typography> */}
-
-            {/* <Box
-            sx={{
-              flexGrow: 1,
-              marginX: "16px",
-              display: { xs: "none", md: "flex" },
-              justifyContent: "end",
-              alignItems: "center",
-            }}
-          >
-            <div className="">
-              <input
-                type="text"
-                className="w-full p-[16px] px-[48px] rounded-full bg-[#FFFFFF] outline-none  shadow-xl "
-                placeholder="Search for..."
-                // value={searchValue}
-              />
-
-              <span className="">
-                <SearchIcon />
-              </span>
-            </div>
-          </Box> */}
-
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
@@ -132,7 +80,6 @@ function NavBar() {
                 alignItems: "center",
               }}
             >
-              {/* <SearchIcon /> */}
               {pages.map((page) => (
                 <Link
                   to={page.route}
@@ -153,20 +100,47 @@ function NavBar() {
               }}
             >
               {showInput ? (
-                <form className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
                   <div className="relative w-full">
                     <input
                       type="text"
                       id="voice-search"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
                       className=" p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
                       placeholder="Search for..."
                       required
                     />
-                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                      <CloseIcon onClick={handleClick} />
+                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] ">
+                      <SearchIcon
+                        className="cursor-pointer"
+                        onClick={() => {
+                          const query = searchTerm.toLowerCase();
+
+                          const filteredImages = productData.reduce(
+                            (acc, category) => {
+                              const filteredImgs = category.img.filter((img) =>
+                                img.name.toLowerCase().includes(query)
+                              );
+                              if (filteredImgs.length > 0) {
+                                acc.push({ ...category, img: filteredImgs });
+                              }
+                              return acc;
+                            },
+                            []
+                          );
+
+                          setFilteredProduct(filteredImages);
+                          setSearchTerm("");
+                        }}
+                      />
                     </div>
                   </div>
-                </form>
+                  <CloseIcon
+                    className="ml-2 cursor-pointer"
+                    onClick={handleClick}
+                  />
+                </div>
               ) : (
                 <SearchIcon
                   className="cursor-pointer"
@@ -228,37 +202,8 @@ function NavBar() {
                   loading="lazy"
                 />
               </Link>
-              {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> */}
-              {/* <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-                
-            </Menu> */}
               <Box
                 sx={{
-                  // flexGrow: 1,
                   display: { xs: "flex", md: "none" },
                   justifyContent: "center",
                   alignItems: "center",
@@ -279,30 +224,57 @@ function NavBar() {
         {showInput && (
           <Box
             sx={{
-              // flexGrow: 1,
               margin: "16px 32px",
               display: { xs: "flex", md: "none" },
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <form className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-center items-center">
               <div className="relative w-full">
                 <input
                   type="text"
                   id="voice-search"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
                   placeholder="Search for..."
                   required
                 />
                 <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                  <SearchIcon />
+                  <SearchIcon
+                    className="cursor-pointer"
+                    onClick={() => {
+                      const query = searchTerm.toLowerCase();
+
+                      const filteredImages = productData.reduce(
+                        (acc, category) => {
+                          const filteredImgs = category.img.filter((img) =>
+                            img.name.toLowerCase().includes(query)
+                          );
+                          if (filteredImgs.length > 0) {
+                            acc.push({ ...category, img: filteredImgs });
+                          }
+                          return acc;
+                        },
+                        []
+                      );
+
+                      setFilteredProduct(filteredImages);
+                      setSearchTerm("");
+                    }}
+                  />
                 </div>
               </div>
-            </form>
+            </div>
           </Box>
         )}
       </AppBar>
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
+        {filteredProduct.map((category) =>
+          category.img.map((img) => <ProductCard key={img?.id} img={img} />)
+        )}
+      </div>
     </>
   );
 }
