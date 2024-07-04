@@ -31,7 +31,7 @@ const Home = () => {
             textAlign: "center",
           }}
         >
-          SHOP BY TOP CATEGORIES
+          OUR TOP CATEGORIES
         </Typography>
         <ProductCarousel />
       </Box>
@@ -57,7 +57,7 @@ const Home = () => {
         </Typography>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
           {productData.map((product) => {
-            return product.img.map((img) => {
+            return product.img.slice(0, 3).map((img) => {
               return <ProductCard key="001" img={img} />;
             });
           })}
