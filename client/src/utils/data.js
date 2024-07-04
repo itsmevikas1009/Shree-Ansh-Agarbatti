@@ -2,47 +2,136 @@ export const productData = [
     {
         'id': '01',
         'category': 'Classic',
-        'alt': 'Classic_',
-        'imgURL': [
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/whyhf1rzlh8bpcqs34aa',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/yetrjnyhq86onkzfesyx',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/qsp0oz49xih00t1mxyb5',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/tmoco40udhocg5j3wwx6'
+        // 'alt': 'Classic_',
+        'img': [
+            {
+                'id': "Classic_01",
+                'name': 'Kavya',
+                'alt': "Classic_01",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/whyhf1rzlh8bpcqs34aa',
+            },
+            {
+                'id': "Classic_02",
+                'name': 'Ramayan',
+                'alt': "Classic_02",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/yetrjnyhq86onkzfesyx',
+            },
+            {
+                'id': "Classic_03",
+                'name': 'Prabhu Darshan',
+                'alt': "Classic_03",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/qsp0oz49xih00t1mxyb5',
+            },
+            {
+                'id': "Classic_04",
+                'name': 'Shree 200',
+                'alt': "Classic_04",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Classic/tmoco40udhocg5j3wwx6'
+            }
         ]
     },
     {
         'id': '02',
         'category': 'Premium',
-        'alt': 'Premium_',
-        'imgURL': [
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gz8h2k85ixl4ej8bzuv2',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gdw2kfavppcuxfakfcga',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/bqxwhmvikz5oaub1zqc9',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/mbeyxjugxqy7ypv4gsk4',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/o2rgcigfi8msoi1ypiww',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/taq4thatjnrgrtip9irm',
+        // 'alt': 'Premium_',
+        'img': [
+            {
+                'id': "Premium_01",
+                'name': 'Vaishnavi',
+                'alt': "Premium_01",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gz8h2k85ixl4ej8bzuv2',
+            },
+            {
+                'id': "Premium_02",
+                'name': 'Shree 500',
+                'alt': "Premium_02",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gdw2kfavppcuxfakfcga',
+            },
+            {
+                'id': "Premium_03",
+                'name': 'Shree Shristi',
+                'alt': "Premium_03",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/bqxwhmvikz5oaub1zqc9',
+            },
+            {
+                'id': "Premium_04",
+                'name': 'Shree Royal',
+                'alt': "Premium_04",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/mbeyxjugxqy7ypv4gsk4',
+            },
+            {
+                'id': "Premium_05",
+                'name': 'Shree Kashi',
+                'alt': "Premium_05",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/o2rgcigfi8msoi1ypiww',
+            },
+            {
+                'id': "Premium_06",
+                'name': 'Shree Bel Patra',
+                'alt': "Premium_06",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/taq4thatjnrgrtip9irm',
+            }
         ]
     },
     {
         'id': '03',
         'category': 'Standard',
-        'alt': 'Standard_',
-        'imgURL': [
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/aq5vwf6vqp6is4rrohjo',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/cphpzimnzdy6ykb1ulgf',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/dvq1hbrhrg86optnouux',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/ydgfr46wmm8zcnivnazj',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/q3xc9e6ijvudhgof0d2j',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/cf9kix7berap1w3v2et8',
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/r3dvbg1lxpi9khxwoeei',
+        'img': [
+            {
+                'id': "Standard_01",
+                'name': 'Shanvi',
+                'alt': "Standard_01",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/aq5vwf6vqp6is4rrohjo',
+            },
+            {
+                'id': "Standard_02",
+                'name': 'Preet',
+                'alt': "Standard_02",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/cphpzimnzdy6ykb1ulgf',
+            },
+            {
+                'id': "Standard_03",
+                'name': 'Gulab Chandan Mogra',
+                'alt': "Standard_03",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/dvq1hbrhrg86optnouux',
+            },
+            {
+                'id': "Standard_04",
+                'name': 'Divyansh',
+                'alt': "Standard_04",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/ydgfr46wmm8zcnivnazj',
+            },
+            {
+                'id': "Standard_05",
+                'name': 'Charlie',
+                'alt': "Standard_05",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/q3xc9e6ijvudhgof0d2j',
+            },
+            {
+                'id': "Standard_06",
+                'name': 'Ansh',
+                'alt': "Standard_06",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/cf9kix7berap1w3v2et8',
+            },
+            {
+                'id': "Standard_07",
+                'name': 'Shree 100',
+                'alt': "Standard_07",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Standard/r3dvbg1lxpi9khxwoeei',
+            },
         ]
     },
     {
         'id': '04',
         'category': 'More',
-        'alt': 'More_',
-        'imgURL': [
-            'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/More/ghvhw8irbqrmvejgxndp',
+        // 'alt': 'More_',
+        'img': [
+            {
+                'id': "More_01",
+                'name': 'Rudraksh',
+                'alt': "More_01",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/More/ghvhw8irbqrmvejgxndp',
+            }
         ]
     }
 ]

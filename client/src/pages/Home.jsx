@@ -1,16 +1,19 @@
 import Banner from "../components/Banner.jsx";
 import { Box, Typography } from "@mui/material";
 import "react-multi-carousel/lib/styles.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ProductCarousel from "../components/ProductCarousel.jsx";
 import GalleryCarousel from "../components/GalleryCarousel.jsx";
+import { productData } from "../utils/data.js";
+import ProductCard from "../components/ProductCard.jsx";
+import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
   return (
     <div id="Home">
       <Banner />
       <Box
-        id="Standard"
+        id="Category"
         sx={{
           marginY: "32px",
           backgroundColor: "#FFFFFF",
@@ -31,6 +34,34 @@ const Home = () => {
           SHOP BY TOP CATEGORIES
         </Typography>
         <ProductCarousel />
+      </Box>
+      <Box
+        sx={{
+          marginY: "32px",
+          backgroundColor: "#FFFFFF",
+          padding: "32px 16px",
+          marginX: { lg: "6rem", md: "4rem", sm: "2rem", xs: "2rem" },
+          borderRadius: "10px",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "monospace",
+            fontWeight: 700,
+            color: "inherit",
+            textAlign: "center",
+          }}
+        >
+          PRODUCTS
+        </Typography>
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
+          {productData.map((product) => {
+            return product.img.map((img) => {
+              return <ProductCard key="001" img={img} />;
+            });
+          })}
+        </div>
       </Box>
       <Box
         className="sm:flex-row md:flex-row lg:flex-row flex-col sm:m-[16px] sm:mx-[60px] md:mx-[80px] lg:mx-[90px] mx-auto m-[16px]"
@@ -61,14 +92,12 @@ const Home = () => {
           <Typography
             className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
@@ -94,14 +123,12 @@ const Home = () => {
           <Typography
             className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
@@ -127,14 +154,12 @@ const Home = () => {
           <Typography
             className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
             variant="heading"
-            // sx={{ paddingX: "24px", fontWeight: "bold" }}
           >
             Premium Collection
           </Typography>
           <Typography
             className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
-            // sx={{ fontSize: "15px", paddingX: "20px" }}
           >
             Most loved by our customers
           </Typography>
@@ -160,12 +185,13 @@ const Home = () => {
             being the most loved by our customers.
           </div>
         </div>
-        <Link
+        <HashLink
           className="px-4 py-1 rounded-[20px] text-white bg-red-600"
-          to="/about-us"
+          to="/about-us#top"
+          scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
         >
           Know More
-        </Link>
+        </HashLink>
       </Box>
       <Box
         id="Gallery"

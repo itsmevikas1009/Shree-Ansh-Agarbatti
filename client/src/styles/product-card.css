@@ -1,10 +1,10 @@
 .product-card {
   text-decoration: none;
   width: 228px;
-  height: 280px;
+  height: 264px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin: 20px;
+  border-radius: 5px;
+  /* margin: 20px; */
 }
 
 .product-img-container {
@@ -19,7 +19,7 @@
 }
 
 .product-details {
-  padding: 5px 10px;
+  padding: 10px 20px;
 }
 
 .product-name {
@@ -27,6 +27,6 @@
   overflow: hidden;
   /* height: 1.5rem; */
   text-align: center;
-  font-size: 24px;
+  /* font-size: 20px; */
   font-weight: 600;
 }

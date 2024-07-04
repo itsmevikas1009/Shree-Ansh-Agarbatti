@@ -1,20 +1,14 @@
 // import React from "react";
 import "../styles/product-card.css";
 
-const ProductCard = () => {
+const ProductCard = ({ img }) => {
   return (
-    <div className="product-card">
+    <div className="product-card m-auto my-4">
       <div className="product-img-container">
-        <img
-          className="product-img"
-          src="https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gz8h2k85ixl4ej8bzuv2"
-        />
+        <img className="product-img" src={img?.imgURL} alt={img?.alt} />
       </div>
-      <div className="product-details">
-        <h3 className="product-name">Vaisnavi</h3>
-        {/* <span className="rating">{avgRatingString} · </span>
-        <span className="time">{sla?.slaString}</span>
-        <p className="cusine">{cuisines.join(", ")}</p> */}
+      <div className="product-details bg-gray-600 text-white">
+        <h3 className="product-name">{img?.name}</h3>
       </div>
     </div>
   );

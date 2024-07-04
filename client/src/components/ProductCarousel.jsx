@@ -9,7 +9,7 @@ const ProductCarousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setImageIndex((imageIndex + 1) % productData.length); // loop through the array
-    }, 4000); // change image every 2 seconds
+    }, 4000); // change image every 4 seconds
 
     return () => clearInterval(intervalId); // clean up interval on component unmount
   }, [imageIndex]);
@@ -39,8 +39,8 @@ const ProductCarousel = () => {
             >
               <img
                 className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
-                src={product?.imgURL[imageIndex % product.imgURL.length]}
-                alt={product.alt + product.id}
+                src={product?.img?.[imageIndex % product.img.length].imgURL}
+                alt={product.img[imageIndex % product.img.length].alt}
               />
               <Typography
                 variant="h6"

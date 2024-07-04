@@ -52,13 +52,10 @@ const Footer = () => {
                 >
                   About
                 </HashLink>
-                {/* <a href="#" className="block hover:underline">
-                  About Us
-                </a> */}
               </li>
               <li>
                 <HashLink
-                  to="/contact-us#Contact"
+                  to="/contact-us#top"
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
@@ -75,14 +72,11 @@ const Footer = () => {
                 >
                   Gallery
                 </HashLink>
-                {/* <a href="#" className="block hover:underline"></a> */}
               </li>
               <li>
                 <HashLink
-                  to="/contact-us#Contact"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
+                  to="/contact-us#top"
+                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
                 >
                   Business With Us
                 </HashLink>
