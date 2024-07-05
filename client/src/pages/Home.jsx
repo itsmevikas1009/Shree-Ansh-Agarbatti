@@ -19,7 +19,7 @@ const Home = () => {
           backgroundColor: "#FFFFFF",
           padding: "32px 0px",
           marginX: { sm: "2rem" },
-          borderRadius: "10px",
+          borderRadius: "8px",
         }}
       >
         <Typography
@@ -40,8 +40,8 @@ const Home = () => {
           marginY: "32px",
           backgroundColor: "#FFFFFF",
           padding: "32px 16px",
-          marginX: { lg: "6rem", md: "4rem", sm: "2rem", xs: "2rem" },
-          borderRadius: "10px",
+          marginX: "2rem",
+          borderRadius: "8px",
         }}
       >
         <Typography
@@ -167,7 +167,7 @@ const Home = () => {
       </Box>
       <Box
         id="About"
-        className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[10px]"
+        className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[8px]"
       >
         <Typography variant="heading" className="text-[32px] m-0 p-0 font-bold">
           About Us
@@ -200,7 +200,7 @@ const Home = () => {
           // backgroundColor: "#FFFFFF",
           padding: "32px 0px",
           marginX: { sm: "2rem" },
-          borderRadius: "10px",
+          borderRadius: "8px",
         }}
       >
         <Typography

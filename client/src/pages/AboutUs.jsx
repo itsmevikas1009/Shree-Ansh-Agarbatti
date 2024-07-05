@@ -27,7 +27,7 @@ const AboutUs = () => {
           premium, woody, cosmetic, florabatti.
         </p>
       </div>
-      <div className="px-8 py-8 my-8 bg-white rounded-xl">
+      <div className="px-8 py-8 my-8 bg-white rounded-lg">
         <div className="flex items-center">
           <img
             src="/images/founder.png"

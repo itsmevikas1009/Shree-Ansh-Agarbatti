@@ -48,7 +48,22 @@ function NavBar() {
     setShowInput(!showInput);
     setFilteredProduct([]);
   };
+  const handleSearch = () => {
+    const query = searchTerm.toLowerCase();
 
+    const filteredImages = productData.reduce((acc, category) => {
+      const filteredImgs = category.img.filter((img) =>
+        img.name.toLowerCase().includes(query)
+      );
+      if (filteredImgs.length > 0) {
+        acc.push({ ...category, img: filteredImgs });
+      }
+      return acc;
+    }, []);
+
+    setFilteredProduct(filteredImages);
+    setSearchTerm("");
+  };
   return (
     <>
       <AppBar
@@ -107,39 +122,22 @@ function NavBar() {
                       id="voice-search"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className=" p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
+                      onKeyPress={(e) => {
+                        if (e.key === "Enter") {
+                          handleSearch();
+                        }
+                      }}
+                      className="p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl"
                       placeholder="Search for..."
                       required
                     />
-                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] ">
-                      <SearchIcon
-                        className="cursor-pointer"
-                        onClick={() => {
-                          const query = searchTerm.toLowerCase();
-
-                          const filteredImages = productData.reduce(
-                            (acc, category) => {
-                              const filteredImgs = category.img.filter((img) =>
-                                img.name.toLowerCase().includes(query)
-                              );
-                              if (filteredImgs.length > 0) {
-                                acc.push({ ...category, img: filteredImgs });
-                              }
-                              return acc;
-                            },
-                            []
-                          );
-
-                          setFilteredProduct(filteredImages);
-                          setSearchTerm("");
-                        }}
+                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px]">
+                      <CloseIcon
+                        className="ml-2 cursor-pointer"
+                        onClick={handleClick}
                       />
                     </div>
                   </div>
-                  <CloseIcon
-                    className="ml-2 cursor-pointer"
-                    onClick={handleClick}
-                  />
                 </div>
               ) : (
                 <SearchIcon
@@ -237,32 +235,20 @@ function NavBar() {
                   id="voice-search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter") {
+                      handleSearch();
+                    }
+                  }}
                   className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
                   placeholder="Search for..."
                   required
                 />
                 <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
                   <SearchIcon
+                    type="submit"
                     className="cursor-pointer"
-                    onClick={() => {
-                      const query = searchTerm.toLowerCase();
-
-                      const filteredImages = productData.reduce(
-                        (acc, category) => {
-                          const filteredImgs = category.img.filter((img) =>
-                            img.name.toLowerCase().includes(query)
-                          );
-                          if (filteredImgs.length > 0) {
-                            acc.push({ ...category, img: filteredImgs });
-                          }
-                          return acc;
-                        },
-                        []
-                      );
-
-                      setFilteredProduct(filteredImages);
-                      setSearchTerm("");
-                    }}
+                    onClick={handleSearch}
                   />
                 </div>
               </div>
