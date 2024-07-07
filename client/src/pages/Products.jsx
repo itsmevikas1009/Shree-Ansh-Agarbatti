@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { productData } from "../utils/data.js";
 import ProductCard from "../components/ProductCard.jsx";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 
 const Products = () => {
   const [filteredProduct, setFilteredProduct] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     setFilteredProduct(productData);
   }, []);
