@@ -24,7 +24,7 @@ import { productData } from "../utils/data.js";
 import ProductCard from "./ProductCard.jsx";
 
 const pages = [
-  { route: "/home", page: "Home" },
+  { route: "/", page: "Home" },
   { route: "/about-us", page: "About" },
   { route: "/contact-us", page: "Contact Us" },
 ];
@@ -48,7 +48,8 @@ function NavBar() {
     setShowInput(!showInput);
     setFilteredProduct([]);
   };
-  const handleSearch = () => {
+  const handleSearch = (event) => {
+    event.preventDefault();
     const query = searchTerm.toLowerCase();
 
     const filteredImages = productData.reduce((acc, category) => {
@@ -116,17 +117,12 @@ function NavBar() {
             >
               {showInput ? (
                 <div className="flex justify-center items-center">
-                  <div className="relative w-full">
+                  <form onSubmit={handleSearch} className="relative w-full">
                     <input
                       type="text"
                       id="voice-search"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      onKeyPress={(e) => {
-                        if (e.key === "Enter") {
-                          handleSearch();
-                        }
-                      }}
                       className="p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl"
                       placeholder="Search for..."
                       required
@@ -137,7 +133,7 @@ function NavBar() {
                         onClick={handleClick}
                       />
                     </div>
-                  </div>
+                  </form>
                 </div>
               ) : (
                 <SearchIcon
@@ -229,29 +225,20 @@ function NavBar() {
             }}
           >
             <div className="w-full flex justify-center items-center">
-              <div className="relative w-full">
+              <form onSubmit={handleSearch} className="relative w-full">
                 <input
                   type="text"
                   id="voice-search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  onKeyPress={(e) => {
-                    if (e.key === "Enter") {
-                      handleSearch();
-                    }
-                  }}
                   className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
                   placeholder="Search for..."
                   required
                 />
                 <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                  <SearchIcon
-                    type="submit"
-                    className="cursor-pointer"
-                    onClick={handleSearch}
-                  />
+                  <SearchIcon type="submit" className="cursor-pointer" />
                 </div>
-              </div>
+              </form>
             </div>
           </Box>
         )}

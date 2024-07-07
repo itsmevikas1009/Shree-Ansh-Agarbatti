@@ -35,7 +35,7 @@ const Footer = () => {
             <ul className="list-none p-0">
               <li>
                 <HashLink
-                  to="/home#Home"
+                  to="/#Home"
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li>
                 <HashLink
-                  to="/home#About"
+                  to="/#About"
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "center" })
                   }
@@ -65,12 +65,20 @@ const Footer = () => {
               </li>
               <li>
                 <HashLink
-                  to="/home#Gallery"
+                  to="/#Gallery"
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "center" })
                   }
                 >
                   Gallery
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  to="/products#top"
+                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Products
                 </HashLink>
               </li>
               <li>
