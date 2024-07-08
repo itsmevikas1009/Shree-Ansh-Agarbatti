@@ -22,8 +22,8 @@ const ProductCarousel = () => {
         showDots={true}
         responsive={responsive}
         infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={8000}
+        // autoPlay={true}
+        // autoPlaySpeed={8000}
         keyBoardControl={true}
         customTransition="all .5"
         containerclassName="carousel-container"
@@ -45,8 +45,6 @@ const ProductCarousel = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  fontFamily: "monospace",
-                  fontWeight: 600,
                   color: "inherit",
                   textAlign: "center",
                   // marginY: "16px",

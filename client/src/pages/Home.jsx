@@ -25,13 +25,12 @@ const Home = () => {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "monospace",
-            fontWeight: 700,
+            fontWeight: "600",
             color: "inherit",
             textAlign: "center",
           }}
         >
-          OUR TOP CATEGORIES
+          Our Top Categories
         </Typography>
         <ProductCarousel />
       </Box>
@@ -47,13 +46,12 @@ const Home = () => {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "monospace",
-            fontWeight: 700,
+            fontWeight: "600",
             color: "inherit",
             textAlign: "center",
           }}
         >
-          PRODUCTS
+          Products
         </Typography>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
           {productData.map((product) => {
@@ -90,13 +88,13 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[20px] md:px-[16px] sm:px-[12px] px-[24px] font-semibold"
             variant="heading"
           >
             Premium Collection
           </Typography>
           <Typography
-            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[16px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
           >
             Most loved by our customers
@@ -121,13 +119,13 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[20px] md:px-[16px] sm:px-[12px] px-[24px] font-semibold"
             variant="heading"
           >
             Premium Collection
           </Typography>
           <Typography
-            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[16px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
           >
             Most loved by our customers
@@ -152,13 +150,13 @@ const Home = () => {
             alt="premium-icon"
           />
           <Typography
-            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[24px] md:px-[16px] sm:px-[12px] px-[24px] font-bold"
+            className="lg:text-[20px] md:text-[16px] sm:text-[16px] text-[20px] text-center lg:px-[20px] md:px-[16px] sm:px-[12px] px-[24px] font-semibold"
             variant="heading"
           >
             Premium Collection
           </Typography>
           <Typography
-            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[20px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
+            className="lg:text-[15px] md:text-[13px] sm:text-[11px] text-[15px] lg:px-[16px] md:px-[18px] sm:px-[16px] px-[20px] text-center"
             variant="heading"
           >
             Most loved by our customers
@@ -169,7 +167,10 @@ const Home = () => {
         id="About"
         className="flex flex-col justify-center items-center md:mx-[120px] mx-[32px] my-[32px] px-4 py-8 bg-white rounded-[8px]"
       >
-        <Typography variant="heading" className="text-[32px] m-0 p-0 font-bold">
+        <Typography
+          variant="heading"
+          className="text-[32px] m-0 p-0 font-semibold"
+        >
           About Us
         </Typography>
         <div className="flex sm:flex-row flex-col sm:mx-0 mx-4 sm:my-0 my-4 justify-center items-center sm:gap-4">
@@ -186,7 +187,7 @@ const Home = () => {
           </div>
         </div>
         <HashLink
-          className="px-4 py-1 rounded-[20px] text-white bg-red-600"
+          className="px-4 py-2 rounded-[20px] text-white bg-[#e92e37] font-semibold mt-4"
           to="/about-us#top"
           scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
         >
@@ -206,13 +207,12 @@ const Home = () => {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "monospace",
-            fontWeight: 700,
+            fontWeight: "600",
             color: "inherit",
             textAlign: "center",
           }}
         >
-          GALLERY
+          Gallery
         </Typography>
         <GalleryCarousel />
       </Box>

@@ -40,7 +40,7 @@ const Products = () => {
           Search
         </Button>
       </div> */}
-      <h1 className="text-4xl font-bold text-center mb-8">Products</h1>
+      <h1 className="text-4xl text-center mb-8 font-semibold">Products</h1>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
         {filteredProduct.map((category) =>
           category.img.map((img) => <ProductCard key={img?.id} img={img} />)

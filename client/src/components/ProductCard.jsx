@@ -7,7 +7,7 @@ const ProductCard = ({ img }) => {
       <div className="product-img-container">
         <img className="product-img" src={img?.imgURL} alt={img?.alt} />
       </div>
-      <div className="product-details bg-gray-600 text-white">
+      <div className="product-details bg-[#e92e37] text-white my-4">
         <h3 className="product-name">{img?.name}</h3>
       </div>
     </div>

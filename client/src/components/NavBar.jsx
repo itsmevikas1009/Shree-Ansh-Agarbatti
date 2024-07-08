@@ -99,7 +99,7 @@ function NavBar() {
               {pages.map((page) => (
                 <Link
                   to={page.route}
-                  className="text-black p-[8px] ml-[16px] font-semibold"
+                  className="text-black p-[8px] ml-[16px]"
                   key={page}
                   onClick={handleCloseNavMenu}
                 >
@@ -236,7 +236,11 @@ function NavBar() {
                   required
                 />
                 <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                  <SearchIcon type="submit" className="cursor-pointer" />
+                  <SearchIcon
+                    onClick={handleSearch}
+                    type="submit"
+                    className="cursor-pointer"
+                  />
                 </div>
               </form>
             </div>

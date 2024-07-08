@@ -31,7 +31,7 @@ const ContactUs = () => {
   };
   return (
     <Box py={4} px={4} className="container mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
+      <h1 className="text-4xl  mb-8 text-center font-semibold">Contact Us</h1>
       <Grid
         container
         // spacing={4}

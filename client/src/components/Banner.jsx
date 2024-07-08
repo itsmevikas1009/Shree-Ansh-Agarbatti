@@ -70,7 +70,6 @@ const responsive = {
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
   height: 610,
-  borderRadius: "8px",
   [theme.breakpoints.down("sm")]: {
     objectFit: "cover",
     height: 300,

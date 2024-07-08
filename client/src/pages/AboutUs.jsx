@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
     <div className="container mx-auto my-8 px-4 sm:px-8 md:px-16 lg:px-32">
-      <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
+      <h1 className="text-4xl text-center mb-8 font-semibold">About Us</h1>
       <div className="text-lg">
         <p>
           Shree Ansh Agarbatti as a brand is known for manufacturing perfumed
@@ -35,7 +35,7 @@ const AboutUs = () => {
             className="w-28 rounded-full mr-4"
           />
           <div>
-            <h2 className="text-2xl font-bold mb-4">Founder</h2>
+            <h2 className="text-2xl font-semibold mb-4">Founder</h2>
             <p>
               <span className="font-semibold">
                 The Founders, Late Mr. Anup Chaurasia
@@ -47,7 +47,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Vision</h2>
+        <h2 className="text-2xl font-semibold mb-4">Vision</h2>
         <p>
           The brand envisions a future wherein every Indian household uses Shree
           Ansh Agarbatti to make their prayers more pure and divine. Incense
@@ -56,7 +56,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Some Historical Fact</h2>
+        <h2 className="text-2xl font-semibold mb-4">Some Historical Fact</h2>
         <p>
           Incense sticks have a long and ancient history especially in Hinduism
           agarbatti in an integral part of most rituals.
