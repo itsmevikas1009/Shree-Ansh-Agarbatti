@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-[#222222] text-white pt-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between md:gap-12 lg:gap-24">
-          <div className="mt-4 w-full md:w-1/4 lg:w-1/4">
+          <div className="my-2 w-full md:w-1/4 lg:w-1/4">
             {/* <img
               src="/logo.png"
               alt="Shree Ansh Agarbatti"
@@ -153,7 +153,7 @@ const Footer = () => {
               </li>
             </ul>
           </div> */}
-          <div className="mt-4 w-full md:w-1/3 lg:w-1/3 mb-2">
+          <div className="my-2 w-full md:w-1/3 lg:w-1/3">
             <h3 className="lg:text-xl md:text-lg text-lg font-semibold mb-2 ">
               Contact
             </h3>
@@ -166,7 +166,7 @@ const Footer = () => {
               <li>shreeansh26@gmail.com</li>
             </ul>
           </div>
-          <div className="mt-4 w-full md:w-1/4 lg:w-1/4 mb-2">
+          <div className="my-2 w-full md:w-1/4 lg:w-1/4">
             <h3 className="lg:text-xl md:text-lg text-lg mb-2 font-semibold md:text-left text-center">
               Stay in the Loop?
             </h3>
@@ -196,7 +196,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="mt-4 mx-4 border-[#b6b0b0]" />
-      <div className="flex flex-col justify-center items-center pb-4 pt-2 text-center gap-2">
+      <div className="flex flex-col justify-center items-center py-2 text-center gap-1">
         <div className="md:text-sm text-xs">
           &#169; Copyrights 2024 - 2025 . Shree Ansh Agarbatti . All Rights
           Reserved.

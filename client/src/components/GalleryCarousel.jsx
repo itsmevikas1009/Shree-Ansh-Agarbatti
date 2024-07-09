@@ -75,15 +75,15 @@ const customAnimation = (
 
   currentSlide.style.opacity = 0;
 
-  currentSlide.style.transition = "opacity 0.5s";
+  currentSlide.style.transition = "opacity 1s";
 
   // Add a fade-in animation to the next slide
 
   nextSlide.style.opacity = 1;
 
-  nextSlide.style.transition = "opacity 0.5s";
+  nextSlide.style.transition = "opacity 1s";
 
-  // Remove the fade-out animation after 0.5 seconds
+  // Remove the fade-out animation after 1 seconds
 
   setTimeout(() => {
     currentSlide.style.opacity = 1;
