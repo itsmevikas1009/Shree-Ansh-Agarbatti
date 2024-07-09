@@ -10,7 +10,7 @@ const Products = () => {
     setFilteredProduct(productData);
   }, []);
   return (
-    <div className="container mx-auto my-8 ">
+    <div className="container mx-auto my-8">
       {/* <div className="search-bar">
         <input
           className="search-input"

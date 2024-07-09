@@ -25,6 +25,7 @@ import ProductCard from "./ProductCard.jsx";
 
 const pages = [
   { route: "/", page: "Home" },
+  { route: "/products", page: "Products" },
   { route: "/about-us", page: "About" },
   { route: "/contact-us", page: "Contact Us" },
 ];

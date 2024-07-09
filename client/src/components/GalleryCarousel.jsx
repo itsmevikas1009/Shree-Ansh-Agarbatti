@@ -12,7 +12,8 @@ const GalleryCarousel = () => {
         autoPlay={true}
         autoPlaySpeed={3000}
         keyBoardControl={true}
-        customTransition="all .5"
+        customAnimation={customAnimation}
+        // customTransition="all .5"
         containerclassName="carousel-container"
         removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         dotListclassName="custom-dot-list-style"
@@ -56,4 +57,37 @@ const galleryResponsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1,
   },
+};
+
+const customAnimation = (
+  nextProps,
+  currentProps,
+  nextElement,
+  currentElement
+) => {
+  // Get the current and next slide elements
+
+  const currentSlide = currentElement.querySelector(".carousel-item");
+
+  const nextSlide = nextElement.querySelector(".carousel-item");
+
+  // Add a fade-out animation to the current slide
+
+  currentSlide.style.opacity = 0;
+
+  currentSlide.style.transition = "opacity 0.5s";
+
+  // Add a fade-in animation to the next slide
+
+  nextSlide.style.opacity = 1;
+
+  nextSlide.style.transition = "opacity 0.5s";
+
+  // Remove the fade-out animation after 0.5 seconds
+
+  setTimeout(() => {
+    currentSlide.style.opacity = 1;
+
+    currentSlide.style.transition = "none";
+  }, 500);
 };

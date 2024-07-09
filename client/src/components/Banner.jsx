@@ -28,7 +28,6 @@ const Banner = () => {
   ];
   return (
     <Carousel
-      className="my-[16px]"
       swipeable={false}
       draggable={false}
       responsive={responsive}
@@ -36,9 +35,10 @@ const Banner = () => {
       autoPlay={true}
       autoPlaySpeed={4000}
       keyBoardControl={true}
+      customAnimation={customAnimation}
       showDots={false}
       slidesToSlide={1}
-      customTransition="all .5"
+      // customTransition=" .5"
       containerClass="carousel-container"
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
@@ -75,3 +75,36 @@ const Image = styled("img")(({ theme }) => ({
     height: 300,
   },
 }));
+
+const customAnimation = (
+  nextProps,
+  currentProps,
+  nextElement,
+  currentElement
+) => {
+  // Get the current and next slide elements
+
+  const currentSlide = currentElement.querySelector(".carousel-item");
+
+  const nextSlide = nextElement.querySelector(".carousel-item");
+
+  // Add a fade-out animation to the current slide
+
+  currentSlide.style.opacity = 0;
+
+  currentSlide.style.transition = "opacity 0.5s";
+
+  // Add a fade-in animation to the next slide
+
+  nextSlide.style.opacity = 1;
+
+  nextSlide.style.transition = "opacity 0.5s";
+
+  // Remove the fade-out animation after 0.5 seconds
+
+  setTimeout(() => {
+    currentSlide.style.opacity = 1;
+
+    currentSlide.style.transition = "none";
+  }, 500);
+};

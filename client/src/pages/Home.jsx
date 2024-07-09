@@ -19,7 +19,7 @@ const Home = () => {
           backgroundColor: "#FFFFFF",
           padding: "32px 0px",
           marginX: { sm: "2rem" },
-          borderRadius: "8px",
+          // borderRadius: "8px",
         }}
       >
         <Typography
@@ -36,11 +36,11 @@ const Home = () => {
       </Box>
       <Box
         sx={{
-          marginY: "32px",
-          backgroundColor: "#FFFFFF",
-          padding: "32px 16px",
+          // marginY: "32px",
+          // backgroundColor: "#FFFFFF",
+          padding: "32px",
           marginX: "2rem",
-          borderRadius: "8px",
+          // borderRadius: "8px",
         }}
       >
         <Typography
@@ -56,11 +56,12 @@ const Home = () => {
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
           {productData.map((product) => {
             return product.img.slice(0, 3).map((img) => {
-              return <ProductCard key="001" img={img} />;
+              return <ProductCard key={img?.id} img={img} />;
             });
           })}
         </div>
       </Box>
+      <hr className="mx-4" />
       <Box
         className="sm:flex-row md:flex-row lg:flex-row flex-col sm:m-[16px] sm:mx-[60px] md:mx-[80px] lg:mx-[90px] mx-auto m-[16px]"
         sx={{

@@ -19,7 +19,7 @@ const ProductCarousel = () => {
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={true}
+        showDots
         responsive={responsive}
         infinite={true}
         // autoPlay={true}
