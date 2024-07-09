@@ -25,7 +25,7 @@ const Footer = () => {
             <img
               src="/logo.png"
               alt="Shree Ansh Agarbatti"
-              className="h-auto sm:w-40 md:w-48 lg:w-56 w-32 mb-2"
+              className="h-auto w-56 mb-2 md:mx-0 mx-auto"
             />
             <ul className="list-none md:px-4 text-sm">
               <li>
@@ -197,11 +197,11 @@ const Footer = () => {
       </div>
       <hr className="mt-4 mx-4 border-[#b6b0b0]" />
       <div className="flex flex-col justify-center items-center pb-4 pt-2 text-center gap-2">
-        <div className="">
+        <div className="md:text-sm text-xs">
           &#169; Copyrights 2024 - 2025 . Shree Ansh Agarbatti . All Rights
           Reserved.
         </div>
-        <div className="">Made with ❤️ in India</div>
+        <div className="md:text-sm text-xs">Made with ❤️ in India</div>
       </div>
     </footer>
   );
