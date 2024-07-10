@@ -41,12 +41,12 @@ export const productData = [
                 'alt': "Premium_01",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gz8h2k85ixl4ej8bzuv2',
             },
-            {
-                'id': "Premium_02",
-                'name': 'Shree 500',
-                'alt': "Premium_02",
-                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gdw2kfavppcuxfakfcga',
-            },
+            // {
+            //     'id': "Premium_02",
+            //     'name': 'Shree 500',
+            //     'alt': "Premium_02",
+            //     'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/Premium/gdw2kfavppcuxfakfcga',
+            // },
             {
                 'id': "Premium_03",
                 'name': 'Shree Shristi',
