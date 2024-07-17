@@ -30,8 +30,8 @@ const ContactUs = () => {
     window.location.href = mailtoLink;
   };
   return (
-    <Box py={4} px={4} className="container mx-auto">
-      <h1 className="text-4xl  mb-8 text-center font-semibold">Contact Us</h1>
+    <Box py={4} px={4} className="lg:mx-20 md:mx-16 sm:mx-8 mx-4">
+      <h1 className="text-4xl mb-8 text-center font-semibold">Contact Us</h1>
       <Grid
         container
         // spacing={4}
@@ -49,7 +49,7 @@ const ContactUs = () => {
           sm={6}
           md={4}
           lg={3}
-          xl={2}
+          xl={3}
           paddingX={2}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
@@ -73,7 +73,7 @@ const ContactUs = () => {
           sm={6}
           md={4}
           lg={3}
-          xl={2}
+          xl={3}
           paddingX={2}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
@@ -100,7 +100,7 @@ const ContactUs = () => {
           sm={6}
           md={4}
           lg={3}
-          xl={2}
+          xl={3}
           paddingX={2}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
@@ -115,7 +115,7 @@ const ContactUs = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid marginY={2} paddingX={2} item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid marginY={2} paddingX={2} item xs={12} sm={6} md={4} lg={3} xl={3}>
           <Box display="flex" flexDirection="column" alignItems="center">
             <IconButton aria-label="schedule">
               <ScheduleOutlinedIcon fontSize="large" />

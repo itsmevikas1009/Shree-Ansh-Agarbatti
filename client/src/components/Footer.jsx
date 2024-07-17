@@ -8,7 +8,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 const Footer = () => {
   return (
     <footer className="bg-[#222222] text-white pt-4">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 px-4 sm:px-6 lg:px-8 md:px-6">
         <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between md:gap-12 lg:gap-24">
           <div className="my-2 w-full md:w-1/4 lg:w-1/4">
             {/* <img
