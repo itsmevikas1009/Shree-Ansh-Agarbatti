@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 
-import Logo from "/logo.png";
+// import Logo from "/logo.png";
 import { useState } from "react";
 import { productData } from "../utils/data.js";
 import ProductCard from "./ProductCard.jsx";
@@ -81,8 +81,8 @@ function NavBar() {
               <Link to="/" className="flex justify-center items-center">
                 <img
                   id="logo"
-                  className="ml-[48px] mr-[8px] md:flex"
-                  src={`${Logo}`}
+                  className="h-[60px] w-[180px] ml-[48px] mr-[8px] md:flex py-1 px-2"
+                  src="https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/meg1q0vtuh3st1nej59h"
                   alt="Shree Ansh Agarbatti"
                   loading="lazy"
                 />
@@ -192,7 +192,9 @@ function NavBar() {
               </Menu>
               <Link to="/" className="flex justify-center items-center">
                 <img
-                  src={`${Logo}`}
+                  className="h-[60px] w-[180px] py-1 px-2"
+                  id="header-logo"
+                  src="https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/meg1q0vtuh3st1nej59h"
                   alt="Shree Ansh Agarbatti"
                   loading="lazy"
                 />
