@@ -37,10 +37,15 @@ const ProductCarousel = () => {
               key={product?.id}
               className="flex flex-col justify-center items-center md:mx-[16px] py-4 hover:cursor-pointer"
             >
-              <img
+              {/* <img
                 className="px-[16px] lg:w-[288px] lg:h-[256px] md:w-[240px] md:h-[208px] w-[128px] h-[96px] "
                 src={product?.img?.[imageIndex % product.img.length].imgURL}
                 alt={product.img[imageIndex % product.img.length].alt}
+              /> */}
+              <img
+                className="bg-[#FFFFFF] rounded-xl lg:px-[16px] lg:py-[16px] p-3  lg:w-auto lg:h-auto md:w-[204px] md:h-[204px] sm:w-[160px] sm:h-[160px] w-[112px] h-[112px] "
+                src={product?.img?.[0].imgURL}
+                alt={product.img[0].alt}
               />
               <Typography
                 variant="h6"
@@ -48,7 +53,7 @@ const ProductCarousel = () => {
                   color: "inherit",
                   textAlign: "center",
                   // marginY: "16px",
-                  paddingY: "16px",
+                  paddingY: "8px",
                 }}
               >
                 {product?.category}

@@ -4,8 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 // import { Link } from "react-router-dom";
 import ProductCarousel from "../components/ProductCarousel.jsx";
 import GalleryCarousel from "../components/GalleryCarousel.jsx";
-import { productData } from "../utils/data.js";
-import ProductCard from "../components/ProductCard.jsx";
+// import { productData } from "../utils/data.js";
+// import ProductCard from "../components/ProductCard.jsx";
 import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
         id="Category"
         sx={{
           marginY: "32px",
-          backgroundColor: "#FFFFFF",
-          padding: "32px 0px",
+          // backgroundColor: "#FFFFFF",
+          padding: "8px 0px",
           marginX: { sm: "2rem" },
           // borderRadius: "8px",
         }}
@@ -34,7 +34,7 @@ const Home = () => {
         </Typography>
         <ProductCarousel />
       </Box>
-      <Box
+      {/* <Box
         sx={{
           // marginY: "32px",
           // backgroundColor: "#FFFFFF",
@@ -60,7 +60,7 @@ const Home = () => {
             });
           })}
         </div>
-      </Box>
+      </Box> */}
       <hr className="mx-4" />
       <Box
         className="sm:flex-row md:flex-row lg:flex-row flex-col sm:m-[16px] sm:mx-[60px] md:mx-[80px] lg:mx-[90px] mx-auto m-[16px]"

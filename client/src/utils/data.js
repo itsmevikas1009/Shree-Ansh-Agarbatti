@@ -5,6 +5,12 @@ export const productData = [
         // 'alt': 'Classic_',
         'img': [
             {
+                'id': "Classic_00",
+                'name': 'Kavya',
+                'alt': "Classic_00",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/tjjvrgivzgij2f2aemd0',
+            },
+            {
                 'id': "Classic_01",
                 'name': 'Kavya',
                 'alt': "Classic_01",
@@ -35,6 +41,12 @@ export const productData = [
         'category': 'Premium',
         // 'alt': 'Premium_',
         'img': [
+            {
+                'id': "Premium_00",
+                'name': 'Vaishnavi',
+                'alt': "Premium_00",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/lt0mt759dgmusnkcytst',
+            },
             {
                 'id': "Premium_01",
                 'name': 'Vaishnavi',
@@ -77,6 +89,12 @@ export const productData = [
         'id': '03',
         'category': 'Standard',
         'img': [
+            {
+                'id': "Standard_00",
+                'name': 'Shanvi',
+                'alt': "Standard_00",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/majoyvsxrkustakxxszw',
+            },
             {
                 'id': "Standard_01",
                 'name': 'Shanvi',
@@ -127,11 +145,17 @@ export const productData = [
         // 'alt': 'More_',
         'img': [
             {
+                'id': "More_00",
+                'name': 'Rudraksh',
+                'alt': "More_00",
+                'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/kqzmmunv9alfxifsu2rg',
+            },
+            {
                 'id': "More_01",
                 'name': 'Rudraksh',
                 'alt': "More_01",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/Product/More/ghvhw8irbqrmvejgxndp',
-            }
+            },
         ]
     }
 ]
