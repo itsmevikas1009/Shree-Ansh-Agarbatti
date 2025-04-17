@@ -6,7 +6,7 @@ export const productData = [
         'img': [
             {
                 'id': "Classic_00",
-                'name': 'Kavya',
+                'name': 'Classic',
                 'alt': "Classic_00",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/tjjvrgivzgij2f2aemd0',
             },
@@ -43,7 +43,7 @@ export const productData = [
         'img': [
             {
                 'id': "Premium_00",
-                'name': 'Vaishnavi',
+                'name': 'Premium',
                 'alt': "Premium_00",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/lt0mt759dgmusnkcytst',
             },
@@ -91,7 +91,7 @@ export const productData = [
         'img': [
             {
                 'id': "Standard_00",
-                'name': 'Shanvi',
+                'name': 'Standard',
                 'alt': "Standard_00",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/majoyvsxrkustakxxszw',
             },
@@ -146,7 +146,7 @@ export const productData = [
         'img': [
             {
                 'id': "More_00",
-                'name': 'Rudraksh',
+                'name': 'More',
                 'alt': "More_00",
                 'imgURL': 'https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/images/kqzmmunv9alfxifsu2rg',
             },

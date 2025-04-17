@@ -25,9 +25,9 @@ const Footer = () => {
             <img
               src="https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/ricozf6dzsn37q76ckwa"
               alt="Shree Ansh Agarbatti"
-              className="h-[60px] w-[180px] mb-2 md:mx-0 mx-auto"
+              className="h-[60px] w-auto mb-2 md:mx-2 mx-auto p-0.5"
             />
-            <ul className="list-none md:px-4 text-sm">
+            <ul className="list-none md:px-4 text-sm text-[#FFFFFF]">
               <li>
                 <HashLink
                   className="hover:underline"
