@@ -22,7 +22,7 @@ const ContactUs = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false); // New state for thank you message
   const [isLoading, setIsLoading] = useState(false);
-  const apiKey = import.meta.env.WEB3FORMS_API_KEY;
+  const apiKey = import.meta.env.VITE_WEB3FORMS_API_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
