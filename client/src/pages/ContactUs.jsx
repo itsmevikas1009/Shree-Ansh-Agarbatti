@@ -27,7 +27,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
     setIsLoading(true); // Start loading state
-
+    console.log(apiKey);
     // Validation: Check if any field is empty
     if (
       !formData.name ||
