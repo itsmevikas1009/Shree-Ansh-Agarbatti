@@ -3,6 +3,22 @@ import { styled, keyframes } from "@mui/material/styles";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+// Move responsive configuration before the component
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 const Banner = () => {
   const bannerData = [
     {
@@ -36,7 +52,8 @@ const Banner = () => {
       autoPlay={true}
       autoPlaySpeed={4000}
       keyBoardControl={true}
-      customAnimation={customAnimation}
+      customTransition="all 1s ease-in-out" // Replace customAnimation
+      transitionDuration={1000} // Add this for proper transition timing
       showDots={false}
       slidesToSlide={1}
       containerClass="carousel-container"
@@ -50,44 +67,6 @@ const Banner = () => {
   );
 };
 
-export default Banner;
-
-// Responsive breakpoints
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
-// Custom animation for slide transitions
-const customAnimation = (nextProps, currentProps, nextElement, currentElement) => {
-  const currentSlide = currentElement.querySelector(".carousel-item");
-  const nextSlide = nextElement.querySelector(".carousel-item");
-
-  if (!currentSlide || !nextSlide) return;
-
-  currentSlide.style.opacity = 0;
-  currentSlide.style.transition = "opacity 1s";
-
-  nextSlide.style.opacity = 1;
-  nextSlide.style.transition = "opacity 1s";
-
-  setTimeout(() => {
-    currentSlide.style.opacity = 1;
-    currentSlide.style.transition = "none";
-  }, 500);
-};
-
-// Shimmer effect styles
 const shimmerAnimation = keyframes`
   0% { background-position: -468px 0 }
   100% { background-position: 468px 0 }
@@ -100,14 +79,10 @@ const Shimmer = styled("div")({
   backgroundImage:
     "linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%)",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "800px 104px",
   animation: `${shimmerAnimation} 1.2s linear infinite`,
   borderRadius: "4px",
 });
 
-//
-// Image with shimmer until load
-//
 const ImageWithShimmer = ({ src, alt }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -139,3 +114,5 @@ const ImageWithShimmer = ({ src, alt }) => {
     </div>
   );
 };
+
+export default Banner;
