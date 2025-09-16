@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { styled, keyframes } from "@mui/material/styles";
 
-// Shimmer animation keyframes
 const shimmerAnimation = keyframes`
   0% { background-position: -468px 0 }
   100% { background-position: 468px 0 }
 `;
 
-// Shimmer styled component
 const Shimmer = styled("div")(({ borderRadius }) => ({
     position: "absolute",
     top: 0,
@@ -22,12 +20,11 @@ const Shimmer = styled("div")(({ borderRadius }) => ({
     animation: `${shimmerAnimation} 1.2s linear infinite`,
 }));
 
-// Reusable ImageWithShimmer Component
 const ImageWithShimmer = ({
     src,
     alt,
     containerClassName = "",
-    imageClassName = "",
+    className = "",
     style = {},
     borderRadius = "4px",
     width = "100%",
@@ -53,7 +50,7 @@ const ImageWithShimmer = ({
                 src={src}
                 alt={alt}
                 loading="lazy"
-                className={imageClassName}
+                className={className}
                 style={{
                     width: "100%",
                     height: "100%",

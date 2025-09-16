@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   AppBar,
   Box,
@@ -12,10 +12,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
 import { productData } from "../utils/data.js";
-import ProductCard from "./ProductCard.jsx";
-import { motion, AnimatePresence } from "framer-motion"; // ✅ Import animations
+import { motion, AnimatePresence } from "framer-motion";
+import ProductCardWithShimmer from "./ProductCardWithShimmer.jsx";
 
 const pages = [
   { route: "/", page: "Home" },
@@ -25,10 +24,42 @@ const pages = [
 ];
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   const [showInput, setShowInput] = useState(false);
   const [filteredProduct, setFilteredProduct] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (showInput && inputRef.current) {
+      inputRef.current.focus(); // autofocus input when shown
+    }
+  }, [showInput]);
+
+  // Optional: debounce search input for performance
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (searchTerm.trim() === "") {
+        setFilteredProduct([]);
+        return;
+      }
+
+      const query = searchTerm.toLowerCase();
+      const filteredImages = productData.reduce((acc, category) => {
+        const filteredImgs = category.img.filter((img) =>
+          img.name.toLowerCase().includes(query)
+        );
+        if (filteredImgs.length > 0) {
+          acc.push({ ...category, img: filteredImgs });
+        }
+        return acc;
+      }, []);
+
+      setFilteredProduct(filteredImages);
+    }, 300);
+
+    return () => clearTimeout(handler);
+  }, [searchTerm]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -38,40 +69,17 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  const handleClick = () => {
-    setShowInput(!showInput);
+  const toggleSearchInput = () => {
+    setShowInput((prev) => !prev);
     setFilteredProduct([]);
-  };
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const query = searchTerm.toLowerCase();
-
-    const filteredImages = productData.reduce((acc, category) => {
-      const filteredImgs = category.img.filter((img) =>
-        img.name.toLowerCase().includes(query)
-      );
-      if (filteredImgs.length > 0) {
-        acc.push({ ...category, img: filteredImgs });
-      }
-      return acc;
-    }, []);
-
-    setFilteredProduct(filteredImages);
     setSearchTerm("");
   };
 
   return (
     <>
-      <AppBar
-        sx={{ backgroundColor: "#fff3f3", color: "black" }}
-        position="sticky"
-      >
+      <AppBar sx={{ backgroundColor: "#fff3f3", color: "black" }} position="sticky">
         <Container className="shadow-md" maxWidth="xl">
-          <Toolbar
-            sx={{ paddingY: "10px", marginX: { md: "16px" } }}
-            disableGutters
-          >
+          <Toolbar sx={{ py: "10px", mx: { md: "16px" } }} disableGutters>
             {/* Logo */}
             <Box>
               <Link to="/" className="flex justify-center items-center">
@@ -89,8 +97,8 @@ function NavBar() {
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
-                marginLeft: "auto",
-                marginRight: "24px",
+                ml: "auto",
+                mr: "24px",
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -113,33 +121,33 @@ function NavBar() {
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight: "48px",
+                mr: "48px",
               }}
             >
               {showInput ? (
                 <div className="flex justify-center items-center">
-                  <form onSubmit={handleSearch} className="relative w-full">
+                  <form
+                    onSubmit={(e) => e.preventDefault()}
+                    className="relative w-full"
+                  >
                     <input
+                      ref={inputRef}
                       type="text"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl"
                       placeholder="Search for..."
-                      required
                     />
-                    <div className="flex absolute inset-y-0 right-0 items-center pr-[16px]">
-                      <CloseIcon
-                        className="ml-2 cursor-pointer"
-                        onClick={handleClick}
-                      />
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-[16px] cursor-pointer">
+                      <CloseIcon onClick={toggleSearchInput} />
                     </div>
                   </form>
                 </div>
               ) : (
                 <SearchIcon
                   className="cursor-pointer"
-                  onClick={handleClick}
-                ></SearchIcon>
+                  onClick={toggleSearchInput}
+                />
               )}
             </Box>
 
@@ -156,7 +164,7 @@ function NavBar() {
             >
               <IconButton
                 size="large"
-                aria-label="account of current user"
+                aria-label="menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
@@ -168,24 +176,16 @@ function NavBar() {
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
                 keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
+                sx={{ display: { xs: "block", md: "none" } }}
               >
                 {pages.map((page) => (
                   <MenuItem key={page.page} onClick={handleCloseNavMenu}>
-                    <Link to={page.route} textAlign="center">
+                    <Link to={page.route} style={{ textAlign: "center" }}>
                       {page.page}
                     </Link>
                   </MenuItem>
@@ -210,50 +210,51 @@ function NavBar() {
                 {!showInput ? (
                   <SearchIcon
                     className="cursor-pointer"
-                    onClick={handleClick}
+                    onClick={toggleSearchInput}
                   />
                 ) : (
-                  <CloseIcon className="cursor-pointer" onClick={handleClick} />
+                  <CloseIcon
+                    className="cursor-pointer"
+                    onClick={toggleSearchInput}
+                  />
                 )}
               </Box>
             </Box>
           </Toolbar>
         </Container>
 
-        {/* Mobile search input */}
+        {/* Mobile Search Input */}
         {showInput && (
           <Box
             sx={{
-              margin: "16px 32px",
+              m: "16px 32px",
               display: { xs: "flex", md: "none" },
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <div className="w-full flex justify-center items-center">
-              <form onSubmit={handleSearch} className="relative w-full">
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
-                  placeholder="Search for..."
-                  required
-                />
-                <div className="flex absolute inset-y-0 right-0 items-center pr-[16px] cursor-pointer">
-                  <SearchIcon
-                    onClick={handleSearch}
-                    type="submit"
-                    className="cursor-pointer"
-                  />
-                </div>
-              </form>
-            </div>
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="relative w-full flex justify-center items-center"
+            >
+              <input
+                ref={inputRef}
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl"
+                placeholder="Search for..."
+                autoFocus
+              />
+              <div className="absolute inset-y-0 right-0 flex items-center pr-[16px] cursor-pointer">
+                <SearchIcon onClick={() => { }} className="cursor-pointer" />
+              </div>
+            </form>
           </Box>
         )}
       </AppBar>
 
-      {/* Search Results with Smooth Animation */}
+      {/* Search Results with Animation */}
       <AnimatePresence>
         {filteredProduct.length > 0 && (
           <motion.div
@@ -272,7 +273,7 @@ function NavBar() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ProductCard img={img} />
+                  <ProductCardWithShimmer img={img} />
                 </motion.div>
               ))
             )}
