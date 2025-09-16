@@ -4,24 +4,18 @@ import {
   Box,
   Toolbar,
   IconButton,
-  // Typography,
   Menu,
   Container,
-  // Avatar,
-  // Tooltip,
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import { Link } from "react-router-dom";
-
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-
-// import Logo from "/logo.png";
 import { useState } from "react";
 import { productData } from "../utils/data.js";
 import ProductCard from "./ProductCard.jsx";
+import { motion, AnimatePresence } from "framer-motion"; // ✅ Import animations
 
 const pages = [
   { route: "/", page: "Home" },
@@ -29,7 +23,6 @@ const pages = [
   { route: "/about-us", page: "About" },
   { route: "/contact-us", page: "Contact Us" },
 ];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,6 +42,7 @@ function NavBar() {
     setShowInput(!showInput);
     setFilteredProduct([]);
   };
+
   const handleSearch = (event) => {
     event.preventDefault();
     const query = searchTerm.toLowerCase();
@@ -66,6 +60,7 @@ function NavBar() {
     setFilteredProduct(filteredImages);
     setSearchTerm("");
   };
+
   return (
     <>
       <AppBar
@@ -77,6 +72,7 @@ function NavBar() {
             sx={{ paddingY: "10px", marginX: { md: "16px" } }}
             disableGutters
           >
+            {/* Logo */}
             <Box>
               <Link to="/" className="flex justify-center items-center">
                 <img
@@ -88,6 +84,8 @@ function NavBar() {
                 />
               </Link>
             </Box>
+
+            {/* Desktop Nav */}
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
@@ -101,13 +99,15 @@ function NavBar() {
                 <Link
                   to={page.route}
                   className="text-black p-[8px] ml-[16px]"
-                  key={page}
+                  key={page.page}
                   onClick={handleCloseNavMenu}
                 >
                   {page.page}
                 </Link>
               ))}
             </Box>
+
+            {/* Desktop Search */}
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
@@ -121,7 +121,6 @@ function NavBar() {
                   <form onSubmit={handleSearch} className="relative w-full">
                     <input
                       type="text"
-                      id="voice-search"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl"
@@ -143,6 +142,8 @@ function NavBar() {
                 ></SearchIcon>
               )}
             </Box>
+
+            {/* Mobile Nav */}
             <Box
               sx={{
                 flexGrow: 1,
@@ -183,7 +184,7 @@ function NavBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page.page} onClick={handleCloseNavMenu}>
                     <Link to={page.route} textAlign="center">
                       {page.page}
                     </Link>
@@ -218,6 +219,8 @@ function NavBar() {
             </Box>
           </Toolbar>
         </Container>
+
+        {/* Mobile search input */}
         {showInput && (
           <Box
             sx={{
@@ -231,7 +234,6 @@ function NavBar() {
               <form onSubmit={handleSearch} className="relative w-full">
                 <input
                   type="text"
-                  id="voice-search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full p-[12px] px-[24px] rounded-full bg-[#FFFFFF] outline-none shadow-xl "
@@ -250,11 +252,33 @@ function NavBar() {
           </Box>
         )}
       </AppBar>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
-        {filteredProduct.map((category) =>
-          category.img.map((img) => <ProductCard key={img?.id} img={img} />)
+
+      {/* Search Results with Smooth Animation */}
+      <AnimatePresence>
+        {filteredProduct.length > 0 && (
+          <motion.div
+            className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6 p-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.4 }}
+          >
+            {filteredProduct.map((category) =>
+              category.img.map((img) => (
+                <motion.div
+                  key={img?.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ProductCard img={img} />
+                </motion.div>
+              ))
+            )}
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </>
   );
 }

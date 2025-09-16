@@ -6,9 +6,11 @@ import ProductCard from "../components/ProductCard.jsx";
 const Products = () => {
   const [filteredProduct, setFilteredProduct] = useState([]);
   // const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     setFilteredProduct(productData);
   }, []);
+
   return (
     <div className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-8">
       {/* <div className="search-bar">
@@ -45,7 +47,7 @@ const Products = () => {
         {filteredProduct.map((category) =>
           category.img
             .slice(1)
-            .map((img) => <ProductCard key={img?.id} img={img} />)
+            .map((img) => <ProductCardWithShimmer key={img?.id} img={img} />)
         )}
       </div>
     </div>
@@ -53,3 +55,33 @@ const Products = () => {
 };
 
 export default Products;
+
+// Shimmer Component
+const Shimmer = ({ className }) => (
+  <div
+    className={`animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${className}`}
+  />
+);
+
+// Wrapper around ProductCard with shimmer
+const ProductCardWithShimmer = ({ img }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="w-[228px] h-[264px] m-auto my-4">
+      <div className="h-[80%] overflow-hidden p-4 relative">
+        {!loaded && <Shimmer className="absolute top-0 left-0 w-full h-full rounded-lg" />}
+        <img
+          className={`h-full w-full object-contain transition-opacity duration-700 ease-in-out ${loaded ? "opacity-100" : "opacity-0"
+            }`}
+          src={img?.imgURL}
+          alt={img?.alt}
+          onLoad={() => setLoaded(true)}
+        />
+      </div>
+      <div className="product-details py-3 px-4 rounded bg-[#e92e37] text-white my-4">
+        <h3 className="text-center overflow-hidden font-semibold">{img?.name}</h3>
+      </div>
+    </div>
+  );
+};
