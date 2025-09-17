@@ -10,7 +10,9 @@ const ProductCard = ({ img }) => {
         />
       </div>
       <div className="product-details py-3 px-4 rounded bg-[#e92e37] text-white my-4">
-        <h3 className="text-center overflow-hidden font-semibold">{img?.name}</h3>
+        <h3 className="text-center overflow-hidden font-semibold">
+          {img?.name}
+        </h3>
       </div>
     </div>
   );

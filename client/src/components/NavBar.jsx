@@ -77,7 +77,10 @@ function NavBar() {
 
   return (
     <>
-      <AppBar sx={{ backgroundColor: "#fff3f3", color: "black" }} position="sticky">
+      <AppBar
+        sx={{ backgroundColor: "#fff3f3", color: "black" }}
+        position="sticky"
+      >
         <Container className="shadow-md" maxWidth="xl">
           <Toolbar sx={{ py: "10px", mx: { md: "16px" } }} disableGutters>
             {/* Logo */}
@@ -247,7 +250,7 @@ function NavBar() {
                 autoFocus
               />
               <div className="absolute inset-y-0 right-0 flex items-center pr-[16px] cursor-pointer">
-                <SearchIcon onClick={() => { }} className="cursor-pointer" />
+                <SearchIcon onClick={() => {}} className="cursor-pointer" />
               </div>
             </form>
           </Box>

@@ -93,8 +93,9 @@ const ImageWithShimmer = ({ src, alt, className }) => {
       <img
         src={src}
         alt={alt}
-        className={`${className} object-contain transition-opacity duration-700 ease-in-out ${loaded ? "opacity-100" : "opacity-0"
-          }`}
+        className={`${className} object-contain transition-opacity duration-700 ease-in-out ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
         onLoad={() => setLoaded(true)}
       />
     </div>
