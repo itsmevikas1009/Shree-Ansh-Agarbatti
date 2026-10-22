@@ -70,6 +70,16 @@ body {
   bottom: 14px;
 }
 
+/* ---------- Product card shimmer ---------- */
+@keyframes shimmer-slide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.shimmer-sweep {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.75) 50%, transparent 100%);
+  animation: shimmer-slide 1.5s ease-in-out infinite;
+}
+
 /* ---------- Incense smoke wisps ---------- */
 @media (prefers-reduced-motion: no-preference) {
   @keyframes smoke-rise {
