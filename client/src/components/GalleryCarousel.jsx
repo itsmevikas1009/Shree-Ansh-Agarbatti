@@ -3,7 +3,7 @@ import ImageWithShimmer from "./ImageWithShimmer";
 import { galleryData } from "../utils/data.js";
 
 const galleryResponsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 3 },
+  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 4 },
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
   tablet: { breakpoint: { max: 1024, min: 736 }, items: 2 },
   mobile: { breakpoint: { max: 736, min: 0 }, items: 1 },
@@ -11,33 +11,31 @@ const galleryResponsive = {
 
 const GalleryCarousel = () => {
   return (
-    <div className="lg:mx-20">
+    <div className="mx-auto max-w-page px-6 sm:px-10 lg:px-14">
       <Carousel
-        swipeable={true}
-        draggable={true}
+        swipeable
+        draggable
         responsive={galleryResponsive}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={3000}
-        keyBoardControl={true}
+        infinite
+        autoPlay
+        autoPlaySpeed={3500}
+        keyBoardControl
+        arrows={false}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        itemClass="px-3"
       >
         {galleryData.map((gallery) => (
           <div
             key={gallery?.id}
-            className="flex flex-col justify-center items-center md:mx-[16px] hover:cursor-pointer rounded-lg my-4 mx-8"
+            className="overflow-hidden rounded-2xl ring-1 ring-stone-200"
           >
             <ImageWithShimmer
               src={gallery?.imgURL}
               alt={gallery?.alt}
-              width="320px"
-              height="228px"
-              borderRadius="8px"
+              width="100%"
+              height="248px"
+              borderRadius="16px"
               objectFit="cover"
-              className="rounded-lg"
             />
           </div>
         ))}

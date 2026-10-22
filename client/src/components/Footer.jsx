@@ -1,207 +1,140 @@
-// import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
+const quickLinks = [
+  { label: "Home", to: "/#Home" },
+  { label: "Products", to: "/products#top" },
+  { label: "Machinery", to: "/machinery#top" },
+  { label: "About", to: "/about-us#top" },
+  { label: "Gallery", to: "/#Gallery" },
+  { label: "Contact Us", to: "/contact-us#top" },
+];
+
+const socials = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/people/SHREE-ANSH-Agarbatti-Co/100065174973492/",
+    Icon: FacebookOutlinedIcon,
+  },
+  { label: "X", href: "https://x.com/AnshAgarbatti", Icon: XIcon },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/shree_ansh_agarbatti/",
+    Icon: InstagramIcon,
+  },
+  {
+    label: "Email",
+    href: "mailto:shreeansh26@gmail.com",
+    Icon: EmailOutlinedIcon,
+  },
+];
+
 const Footer = () => {
   return (
-    <footer className="bg-[#222222] text-white pt-4">
-      <div className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 px-4 sm:px-6 lg:px-8 md:px-6">
-        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between md:gap-12 lg:gap-24">
-          <div className="my-2 w-full md:w-1/4 lg:w-1/4">
-            {/* <img
-              src="/logo.png"
-              alt="Shree Ansh Agarbatti"
-              className="block  md:hidden lg:hidden w-56 mx-auto"
-            />
-            <h3 className="mt-4 sm:mt-0 mb-2 text-2xl">Shree Ansh Agarbatti</h3>
-            <p className="mb-[8px] text-sm sm:text-base">
-              We understand what our customer demands and expects. We as a brand
-              are more customers driven and believe in the spirit of innovation
-              and creativity.
-            </p> */}
+    <footer className="bg-smoke-950 text-stone-300">
+      <div className="mx-auto max-w-page px-6 py-14 sm:px-10 lg:px-14">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+          {/* Brand */}
+          <div className="md:col-span-5">
             <img
               src="https://res.cloudinary.com/dogqvcvs4/image/upload/f_auto,q_auto/v1/public/ricozf6dzsn37q76ckwa"
               alt="Shree Ansh Agarbatti"
-              className="h-[60px] w-auto mb-2 md:mx-2 mx-auto p-0.5"
+              className="h-[56px] w-auto"
             />
-            <ul className="list-none md:px-4 text-sm text-[#FFFFFF]">
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/#Home"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  Home
-                </HashLink>
-              </li>
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/#About"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
-                  About
-                </HashLink>
-              </li>
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/contact-us#top"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  Contact Us
-                </HashLink>
-              </li>
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/#Gallery"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
-                  Gallery
-                </HashLink>
-              </li>
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/products#top"
-                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Products
-                </HashLink>
-              </li>
-              <li>
-                <HashLink
-                  className="hover:underline"
-                  to="/contact-us#top"
-                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Business With Us
-                </HashLink>
-              </li>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-stone-400">
+              Perfumed agarbatti and agarbatti making machinery from Gorakhpur,
+              crafted to make every prayer more pure and divine.
+            </p>
+            <ul className="mt-6 flex items-center gap-3">
+              {socials.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-stone-300 transition hover:border-ember hover:text-ember"
+                  >
+                    <Icon fontSize="small" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          {/* <div className="mt-4 w-full md:w-1/4 lg:w-1/4 mb-2">
-            <h3 className="  mb-2 ">Useful Links</h3>
-            <ul className="list-none p-0">
-              <li>
-                <HashLink className="hover:underline"
-                  to="/#Home"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  Home
-                </HashLink>
-              </li>
-              <li>
-                <HashLink className="hover:underline"
-                  to="/#About"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
-                  About
-                </HashLink>
-              </li>
-              <li>
-                <HashLink className="hover:underline"
-                  to="/contact-us#top"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  Contact Us
-                </HashLink>
-              </li>
-              <li>
-                <HashLink className="hover:underline"
-                  to="/#Gallery"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
-                >
-                  Gallery
-                </HashLink>
-              </li>
-              <li>
-                <HashLink className="hover:underline"
-                  to="/products#top"
-                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Products
-                </HashLink>
-              </li>
-              <li>
-                <HashLink className="hover:underline"
-                  to="/contact-us#top"
-                  scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Business With Us
-                </HashLink>
-              </li>
+
+          {/* Quick links */}
+          <div className="md:col-span-3">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-100">
+              Explore
+            </h3>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <HashLink
+                    className="text-stone-400 transition hover:text-white"
+                    to={link.to}
+                    scroll={(el) =>
+                      el.scrollIntoView({ behavior: "smooth", block: "start" })
+                    }
+                  >
+                    {link.label}
+                  </HashLink>
+                </li>
+              ))}
             </ul>
-          </div> */}
-          <div className="my-2 w-full md:w-1/3 lg:w-1/3">
-            <h3 className="lg:text-xl md:text-lg text-lg font-semibold mb-2 ">
+          </div>
+
+          {/* Contact */}
+          <div className="md:col-span-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-100">
               Contact
             </h3>
-            <ul className="text-sm list-none p-0">
-              <li className="mb-2">
-                Shree Ansh Agarbatti Co. Gola Bazar, Gorakhpur, Uttar Pradesh
-                273408 India
-              </li>
-              <li>+91-9889733153</li>
-              <li>shreeansh26@gmail.com</li>
-            </ul>
-          </div>
-          <div className="my-2 w-full md:w-1/4 lg:w-1/4">
-            <h3 className="lg:text-xl md:text-lg text-lg mb-2 font-semibold md:text-left text-center">
-              Stay in the Loop?
-            </h3>
-            <ul className="flex items-center gap-4 list-none md:justify-start justify-center">
+            <ul className="mt-4 space-y-2.5 text-sm text-stone-400">
               <li>
-                <a href="https://www.facebook.com/people/SHREE-ANSH-Agarbatti-Co/100065174973492/">
-                  <FacebookOutlinedIcon fontSize="medium" />
+                Shree Ansh Agarbatti Co., Gola Bazar, Gorakhpur,
+                <br />
+                Uttar Pradesh 273408, India
+              </li>
+              <li>
+                <a href="tel:+919889733153" className="transition hover:text-white">
+                  +91 98897 33153
                 </a>
               </li>
               <li>
-                <a href="https://x.com/AnshAgarbatti">
-                  <XIcon fontSize="medium" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/shree_ansh_agarbatti/">
-                  <InstagramIcon fontSize="medium" />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:shreeansh26@gmail.com">
-                  <EmailOutlinedIcon className="" fontSize="medium" />
+                <a
+                  href="mailto:shreeansh26@gmail.com"
+                  className="transition hover:text-white"
+                >
+                  shreeansh26@gmail.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <hr className="mt-4 mx-4 border-[#b6b0b0]" />
-      <div className="flex flex-col justify-center items-center py-2 text-center gap-1">
-        <div className="md:text-sm text-xs">
-          &#169; Copyrights 2024 - 2025 . Shree Ansh Agarbatti . All Rights
-          Reserved.
+
+      {/* Giant serif signature */}
+      <div
+        aria-hidden="true"
+        className="select-none overflow-hidden px-6 sm:px-10 lg:px-14"
+      >
+        <div className="mx-auto max-w-page">
+          <div className="translate-y-[0.32em] whitespace-nowrap font-display text-[clamp(3.5rem,11vw,10rem)] font-semibold leading-none tracking-tight text-white/[0.05]">
+            Shree Ansh
+          </div>
         </div>
-        <div className="md:text-sm text-xs">Made with ❤️ in India</div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-page flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-stone-500 sm:flex-row sm:px-10 lg:px-14">
+          <span>
+            &#169; 2024-2027 Shree Ansh Agarbatti. All rights reserved.
+          </span>
+          <span>Made with care in India</span>
+        </div>
       </div>
     </footer>
   );

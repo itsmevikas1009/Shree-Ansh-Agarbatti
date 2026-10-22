@@ -1,75 +1,105 @@
+import { motion, useReducedMotion } from "framer-motion";
+import Seo from "../components/Seo.jsx";
+import { reveal } from "../utils/motion.js";
+
 const AboutUs = () => {
+  const reduce = useReducedMotion();
+
   return (
-    <div className="lg:mx-20 md:mx-16 sm:mx-8 mx-4 my-8 px-4 sm:px-8 md:px-16 lg:px-32">
-      <h1 className="text-4xl text-center mb-8 font-semibold">About Us</h1>
-      <div className="text-lg">
-        <p>
-          Shree Ansh Agarbatti as a brand is known for manufacturing perfumed
-          agarbatti. Shree Ansh Agarbatti is a name that has earned the respect,
-          Shree Ansh has continued to grow in strength and market reach to be
-          ranked as the best agarbatti manufacturing company in India and across
-          the world. With state-of-the-art manufacturing facilities located at
-          Gorakhpur, we manufacture a vast range of perfumed agarbatti. Our
-          premium flagship collection product range being the most loved by our
-          customers.
-        </p>
-        <p className="mt-4">
-          To make incense quality more pleasurable and long lasting, we come
-          with the concept to create and supply incense with magnificent and
-          mild aromas at affordable price.
-        </p>
-        <p className="mt-4">
-          We understand what our customer demands and expects. We as a brand are
-          more customers driven and believe in the spirit of innovation and
-          creativity. Each incense stick is created with utmost care with the
-          objective of delivering nothing but the best. Currently offering 35
-          varieties of incense sticks in different undertones- floral, oriental,
-          premium, woody, cosmetic, florabatti.
-        </p>
-      </div>
-      <div className="px-8 py-8 my-8 bg-white rounded-lg">
-        <div className="flex items-center">
+    <div className="mx-auto max-w-page px-6 py-16 sm:px-10 lg:px-14">
+      <Seo
+        title="About Us | Agarbatti Manufacturer in Gorakhpur | Shree Ansh Agarbatti"
+        description="The story of Shree Ansh Agarbatti, a trusted agarbatti manufacturer in Gorakhpur, Uttar Pradesh, crafting 35+ varieties of perfumed incense with modern machinery and traditional care."
+        path="/about-us"
+      />
+      {/* Intro */}
+      <motion.div {...reveal(reduce)} className="max-w-3xl">
+        <h1 className="font-display text-5xl font-medium tracking-tight text-stone-900 sm:text-6xl">
+          A fragrance born in <span className="italic">Gorakhpur</span>
+        </h1>
+        <div className="mt-8 space-y-5 leading-relaxed text-stone-600">
+          <p>
+            Shree Ansh Agarbatti is known for manufacturing perfumed agarbatti.
+            It is a name that has earned respect, growing in strength and
+            market reach to rank among the finest agarbatti manufacturers in
+            India. With state-of-the-art manufacturing facilities located at
+            Gorakhpur, we produce a vast range of perfumed incense, with our
+            premium flagship collection being the most loved by customers.
+          </p>
+          <p>
+            To make incense more pleasurable and long-lasting, we set out to
+            create and supply incense with magnificent, mild aromas at an
+            affordable price.
+          </p>
+          <p>
+            We understand what our customers demand and expect. We are a
+            customer-driven brand that believes in the spirit of innovation and
+            creativity. Each incense stick is created with utmost care, with the
+            objective of delivering nothing but the best: currently 35
+            varieties across floral, oriental, premium, woody, cosmetic and
+            florabatti undertones.
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Founder */}
+      <motion.div
+        {...reveal(reduce)}
+        className="mt-16 overflow-hidden rounded-2xl bg-smoke-950 text-stone-200"
+      >
+        <div className="flex flex-col items-center gap-8 px-8 py-12 sm:flex-row sm:px-12">
           <img
             src="/images/founder.png"
-            alt="Founder Image"
-            className="w-28 rounded-full mr-4"
+            alt="Late Mr. Anup Chaurasia, founder of Shree Ansh Agarbatti"
+            className="h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-white/20"
           />
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Founder</h2>
-            <p>
-              <span className="font-semibold">
-                The Founders, Late Mr. Anup Chaurasia
-              </span>{" "}
-              through his hard work, dedication, and dynamism made the company
-              most trusted and popular brands.
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+              In loving memory
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-stone-50">
+              Late Mr. Anup Chaurasia
+            </h2>
+            <p className="mt-3 max-w-xl leading-relaxed text-stone-400">
+              Our founder, whose hard work, dedication and dynamism made Shree
+              Ansh one of the most trusted and popular agarbatti brands.
             </p>
           </div>
         </div>
-      </div>
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Vision</h2>
-        <p>
-          The brand envisions a future wherein every Indian household uses Shree
-          Ansh Agarbatti to make their prayers more pure and divine. Incense
-          sticks not only sanctify your prayers but also uplift your mood, calm
-          you down and even increase concentration.
-        </p>
-      </div>
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Some Historical Fact</h2>
-        <p>
-          Incense sticks have a long and ancient history especially in Hinduism
-          agarbatti in an integral part of most rituals.
-        </p>
-        <p className="mt-4">
-          An Incense sticks is its to introduce pleasant fragrance and to clean
-          the air of negative energy.
-        </p>
-        <p className="mt-4">
-          In every home and religious province across the country, incense
-          sticks are used for worship, aromatherapy, meditation, deodorant and
-          insect repellent.
-        </p>
+      </motion.div>
+
+      {/* Vision + Heritage */}
+      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <motion.div
+          {...reveal(reduce)}
+          className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-stone-200 sm:p-10"
+        >
+          <h2 className="font-display text-3xl font-semibold text-stone-900">
+            Our Vision
+          </h2>
+          <p className="mt-4 leading-relaxed text-stone-600">
+            We envision a future where every Indian household uses Shree Ansh
+            Agarbatti to make their prayers more pure and divine. Incense not
+            only sanctifies your prayers. It uplifts your mood, calms you down
+            and even increases concentration.
+          </p>
+        </motion.div>
+
+        <motion.div
+          {...reveal(reduce)}
+          className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-stone-200 sm:p-10"
+        >
+          <h2 className="font-display text-3xl font-semibold text-stone-900">
+            An Ancient Tradition
+          </h2>
+          <p className="mt-4 leading-relaxed text-stone-600">
+            Incense sticks have a long and ancient history. In Hinduism,
+            agarbatti is an integral part of most rituals, introducing pleasant
+            fragrance and cleansing the air of negative energy. Across homes and
+            temples in India, incense is used for worship, aromatherapy,
+            meditation and more.
+          </p>
+        </motion.div>
       </div>
     </div>
   );
